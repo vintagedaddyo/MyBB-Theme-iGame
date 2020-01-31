@@ -1,0 +1,5072 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme name="iGame1822" version="1822">
+	<properties>
+		<templateset><![CDATA[2]]></templateset>
+		<editortheme><![CDATA[mybb.css]]></editortheme>
+		<imgdir><![CDATA[images/igame]]></imgdir>
+		<logo><![CDATA[images/igame/logo.png]]></logo>
+		<tablespace><![CDATA[5]]></tablespace>
+		<borderwidth><![CDATA[0]]></borderwidth>
+		<color><![CDATA[]]></color>
+		<disporder><![CDATA[a:8:{s:10:"global.css";i:1;s:10:"usercp.css";i:2;s:9:"modcp.css";i:3;s:16:"star_ratings.css";i:4;s:14:"showthread.css";i:5;s:17:"thread_status.css";i:6;s:8:"css3.css";i:7;s:7:"new.css";i:8;}]]></disporder>
+	</properties>
+	<stylesheets>
+		<stylesheet name="new.css" version="1822"><![CDATA[/*
+ * MyBB: iGame Frontend Theme 
+ *
+ * File: new.css
+ * 
+ * Author: iAndrew, Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1822
+ * 
+ */
+
+.no_bottom_border {
+	border-bottom: 0;
+}
+
+.post.unapproved_post {
+
+}
+
+.post.unapproved_post .post_author {
+}
+
+.post.classic.unapproved_post .post_author {
+
+}
+
+.post.unapproved_post .post_controls {
+
+}
+
+.trow_deleted,
+.post.deleted_post {
+	background: rgba(15,15,15,0.95);
+    color: #f1f1f1;
+	padding: 15px !important;
+}
+
+.deleted_post_hidden {
+	background: rgba(15,15,15,0.95);
+    color: #f1f1f1;
+	padding: 10px !important;
+	padding: 15px;
+}
+
+.deleted_post_collapsed {
+	background: rgba(15,15,15,0.95);
+    color: #f1f1f1;
+	padding: 15px !important;
+}
+
+.deleted_post_collapsed .show_deleted_post {
+	margin-top: 0px;
+	padding: 15px;
+}
+
+.deleted_post_collapsed .show_deleted_post a.button span {
+	background-position: 0 -400px;
+}
+
+.f-nav {
+    right: 0;  
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 90%;
+	margin: auto auto;
+    z-index: 9999;
+}
+
+#main-menu-container {
+    text-align: center; 
+	margin: auto auto;
+}
+
+#main-menu {
+    display: inline-block;
+    width: 100%; 
+    margin: auto auto;
+}
+
+br {
+ clear:left
+}
+
+.bmenu {
+	background: rgba(15,15,15,0.95);
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-box-shadow: rgba(0,0,0,0.7) 0px 1px 8px, inset rgba(0,0,0,0.4) 0px 0px 0px 1px;
+	-moz-box-shadow: rgba(0,0,0,0.7) 0px 1px 8px, inset rgba(0,0,0,0.4) 0px 0px 0px 1px;
+	box-shadow: rgba(0,0,0,0.7) 0px 1px 8px, inset rgba(0,0,0,0.4) 0px 0px 0px 1px;
+	text-shadow: rgba(0,0,0,0.7) 0px 1px 1px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	margin: auto auto;
+	
+	text-decoration: none;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.bmenu ul {
+    margin: 0; padding: 0;
+    float: left;
+}
+
+.bmenu ul li {
+    display: inline;
+}
+
+.bmenu ul li a {
+    float: left; text-decoration: none;
+    color: #fff;
+    padding: 10.5px 11px;
+}
+
+.bmenu ul li a:visited {
+    color: #fff;
+}
+
+.bmenu ul li a:hover, .bmenu ul li .current {
+	color: #ccc;
+}
+
+.newposts {
+	background: rgba(15,15,15,0.95);
+	color: #f1f1f1;
+	-webkit-box-shadow: rgba(0,0,0,0.7) 0px 1px 8px, inset rgba(0,0,0,0.4) 0px 0px 0px 1px;
+	-moz-box-shadow: rgba(0,0,0,0.7) 0px 1px 8px, inset rgba(0,0,0,0.4) 0px 0px 0px 1px;
+	box-shadow: rgba(0,0,0,0.7) 0px 1px 8px, inset rgba(0,0,0,0.4) 0px 0px 0px 1px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	text-shadow: 0px 1px 1px #171717;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	margin-top: 15px;
+	font: normal 13px tahoma,helvetica,arial,sans-serif;
+	
+	font-style: normal;
+}
+
+.usermenu {
+	float: left;
+	text-align: left;
+	font-family: 'Roboto Condensed', sans-serif;
+    font-style: normal;
+	text-decoration: none;
+  	font-size: 17px;
+  	font-weight: bold;
+  	width: 100%;
+    text-shadow: rgba(0,0,0,0.25) 0px 1px 1px;
+}
+
+.usermenu ul {
+        padding: 0;
+        margin: 0;
+	text-shadow: rgba(0,0,0,0.25) 0px 1px 1px;
+}
+
+.usermenu li {
+	list-style: none;
+	display: inline-block;
+	padding: 13px 12px;
+	margin: 0;
+	-webkit-transition: background-color 600ms linear, color 600ms linear;
+	-moz-transition: background-color 600ms linear, color 600ms linear;
+	-o-transition: background-color 600ms linear, color 600ms linear;
+	-ms-transition: background-color 600ms linear, color 600ms linear;
+	transition: background-color 600ms linear, color 600ms linear;	
+	font-style: normal;
+	text-shadow: rgba(0,0,0,0.25) 0px 1px 1px;
+}
+
+.usermenu li:hover, .usermenu li:active {
+	-webkit-transition: background-color 600ms linear, color 600ms linear;
+	-moz-transition: background-color 600ms linear, color 600ms linear;
+	-o-transition: background-color 600ms linear, color 600ms linear;
+	-ms-transition: background-color 600ms linear, color 600ms linear;
+	transition: background-color 600ms linear, color 600ms linear;
+	text-shadow: rgba(0,0,0,0.25) 0px 1px 1px;
+}
+
+.usermenu li a:link, .usermenu li a:visited {
+        color: #fff;
+        text-shadow: rgba(0,0,0,0.25) 0px 1px 1px;
+}
+
+#pm_notification {
+	background: #3f9889;
+	border: 1px solid #3f9889;
+	color: #fff;
+    -moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	text-shadow: 1px 1px 0px #3f9889;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	display: inline-block;
+	height: 10px;
+	line-height: 10px;
+	padding: 4px 5px 4px 5px;
+    font-style: normal;
+    font-size: 13px;
+}
+
+a#pm_notification {
+	color: #fff;
+    text-shadow: 1px 1px 0 #3f9889;
+	text-decoration: none;
+    font-style: normal;
+    font-size: 14px;
+}
+
+a#pm_notification: hover {
+	color: #fff;
+    text-shadow: 1px 1px 0 #3f9889;
+}
+
+div.theme, div.language {
+    display: inline-block;
+}
+
+.fmenu {
+	width: 170px;
+	margin: 2px;
+	text-shadow: 0  1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.fmenu li a {
+	voice-family: female;
+}
+
+.fmenu li a:link, .fmenu li a:visited {
+	color: #FFF;
+	display: block;
+	padding: 8px 0 0 10px;
+    text-shadow: 0  1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.fmenu li a:hover {
+	color: #ccc;
+	padding: 8px 0 0 10px;
+	-webkit-transform: translate(3px,0px);
+}
+
+.fmenu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+    text-shadow: 0  1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.posttext {
+	color: #f1f1f1;
+	margin-top: -20px;
+	text-shadow: rgba(0,0,0,0.7) 0px 1px 1px;
+	text-transform: uppercase;
+	overflow: hidden;
+	
+	text-decoration: none;
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+a.button2:link,
+a.button2:visited,
+a.button2:active {
+	background: #3f9889;
+	color: #fff;
+	text-shadow: rgba(0,0,0,0.4) 0px 1px 1px;
+	-moz-box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+	-webkit-box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+	box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	display: inline-block;
+	padding: 6px 8px;
+	margin: 2px 2px 6px 2px;
+	transition: text-shadow 3s;
+	-moz-transition: text-shadow 3s;
+	-webkit-transition: text-shadow 3s;
+	-o-transition: text-shadow 3s;	
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 14px;
+	font-style: normal;
+}
+
+a.button2:hover {
+	background: #646464;
+	color: #fff;
+	text-shadow: #82241f 0px 1px 1px;
+	-moz-box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+	-webkit-box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+	box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	-webkit-transition: background-color 600ms linear, color 600ms linear;
+	-moz-transition: background-color 600ms linear, color 600ms linear;
+	-o-transition: background-color 600ms linear, color 600ms linear;
+	-ms-transition: background-color 600ms linear, color 600ms linear;
+	transition: background-color 600ms linear, color 600ms linear;
+}
+
+a.button2:link,
+a.button2:hover,
+a.button2:visited,
+a.button2:active {
+text-shadow: 0 0 40px #fff;
+}
+
+.logotext {
+	color: #fff !important;
+	margin-top: 25px;
+	text-shadow: rgba(0,0,0,0.7) 0px 1px 1px;
+	text-transform: uppercase;
+	overflow: hidden;
+	
+	text-decoration: none;
+	font-family: 'Lato', sans-serif;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.logotext a:link,
+.logotext a:visited,
+.logotext a:hover,
+.logotext  a:active {
+	color: #fff !important;
+}
+
+.threadtext {
+	color: #3f9889;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: bold;
+}
+
+#mainwidth {
+	width: 90%;
+	text-align: left;
+	line-height: 1.4;
+	margin: auto auto;
+	margin-bottom: 60px;
+}
+
+.pagination2 a:link, .pagination2 a:visited {
+	background: #3f9889;
+	color: #f1f1f1;
+	text-shadow: #357c70 0px 1px 1px;
+	border: 1px solid #3f9889;
+	text-align: center;
+	margin-top: 15px;
+	cursor: pointer;
+	padding: 1px 4px;
+	transition: all 0.5s ease;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	
+	font-size: 13px;
+}
+
+:focus {
+	outline: none;
+}
+
+legend {
+	background: #3f9889;
+	text-shadow: rgba(0,0,0,0.4) 0px -1px 0px;
+	-moz-box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+	-webkit-box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+	box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	padding: 0.2em 0.5em;
+	text-align: left;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: normal;
+}
+
+fieldset {
+	border: 1px dashed #222222;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-align: left;	
+	color: #ccc;
+}
+
+/* TOOLTIP STYLES */
+
+.tipsy{
+font-size:12px;position:absolute;padding:5px;z-index:100000
+}
+
+.tipsy-inner{
+background-color:#000;color:#FFF;max-width:200px;padding:5px 8px 4px;text-align:center
+}
+
+/* Rounded corners */
+.tipsy-inner{
+border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px
+}
+
+/* Uncomment for shadow */
+/*.tipsy-inner {
+ box-shadow: 0 0 5px #000000; -webkit-box-shadow: 0 0 5px #000000; -moz-box-shadow: 0 0 5px #000000;
+}
+
+*/
+.tipsy-arrow{
+position:absolute;width:0;height:0;line-height:0;border:5px dashed #000
+}
+
+/* Rules to colour arrows */
+.tipsy-arrow-n{
+border-bottom-color:#000
+}
+
+.tipsy-arrow-s{
+border-top-color:#000
+}
+
+.tipsy-arrow-e{
+border-left-color:#000
+}
+
+.tipsy-arrow-w{
+border-right-color:#000
+}
+
+.tipsy-n .tipsy-arrow{
+top:0;left:50%;margin-left:-5px;border-bottom-style:solid;border-top:none;border-left-color:transparent;border-right-color:transparent
+}
+
+.tipsy-nw .tipsy-arrow{
+top:0;left:10px;border-bottom-style:solid;border-top:none;border-left-color:transparent;border-right-color:transparent
+}
+
+.tipsy-ne .tipsy-arrow{
+top:0;right:10px;border-bottom-style:solid;border-top:none;border-left-color:transparent;border-right-color:transparent
+}
+
+.tipsy-s .tipsy-arrow{
+bottom:0;left:50%;margin-left:-5px;border-top-style:solid;border-bottom:none;border-left-color:transparent;border-right-color:transparent
+}
+
+.tipsy-sw .tipsy-arrow{
+bottom:0;left:10px;border-top-style:solid;border-bottom:none;border-left-color:transparent;border-right-color:transparent
+}
+
+.tipsy-se .tipsy-arrow{
+bottom:0;right:10px;border-top-style:solid;border-bottom:none;border-left-color:transparent;border-right-color:transparent
+}
+
+.tipsy-e .tipsy-arrow{
+right:0;top:50%;margin-top:-5px;border-left-style:solid;border-right:none;border-top-color:transparent;border-bottom-color:transparent
+}
+
+.tipsy-w .tipsy-arrow{
+left:0;top:50%;margin-top:-5px;border-right-style:solid;border-left:none;border-top-color:transparent;border-bottom-color:transparent
+}
+
+footer {
+	background: rgba(15,15,15,0.95);
+	width: auto;
+	color: rgb(248,248,248);
+	padding: 10px;
+	height: auto;
+	-webkit-box-shadow: rgba(0,0,0,0.7) 0px 1px 8px, inset rgba(0,0,0,0.4) 0px 0px 0px 1px;
+	-moz-box-shadow: rgba(0,0,0,0.7) 0px 1px 8px, inset rgba(0,0,0,0.4) 0px 0px 0px 1px;
+	box-shadow: rgba(0,0,0,0.7) 0px 1px 8px, inset rgba(0,0,0,0.4) 0px 0px 0px 1px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	border-top: none;
+	border: 1px solid #2e2e2e;
+	text-shadow: 0  1px 1px rgba(0, 0, 0, 0.3);
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	
+	font-size: 13px;
+}
+
+footer h3 {
+	color: #ccc;
+}
+
+#menuthree {
+	background: rgba(15,15,15,0.95);
+	text-align: left;
+	border-bottom: 1px solid #2e2e2e;
+	-moz-border-bottom-right-radius: 2px;
+	-webkit-border-bottom-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+	-moz-border-bottom-left-radius: 2px;
+	-webkit-border-bottom-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+	font-size: 13px;
+}
+
+footer a {
+	color: #fff!important;
+	font-size: 13px;
+}
+
+.menu_simple ul {
+    margin: 0; 
+    padding: 0;
+    list-style-type: none;
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 12px;
+	width: 160px;
+}
+
+.menu_simple ul li a {
+    text-decoration: none;
+    color: #c7c7c7 !important;
+    padding: 5px 5px;
+    display:block;
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 12px;
+}
+
+.menu_simple a:visited {
+    color: #c7c7c7 !important;
+}
+
+.menu_simple a:hover {
+    color: #fff !important;
+    -webkit-animation: moveAndBack 1s ease-in-out;
+}
+
+.col,
+.col * { 
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.col {
+  position: relative;
+  float: left;
+  padding: 0 1em;
+}
+
+.clear:before,
+.clear:after {
+  content: " ";
+  display: table;
+}
+.clear:after {
+  clear: both;
+}
+
+@media all and (max-width: 480px) {
+  .col { 
+    width: 100% !important;
+    margin: 0 !important;
+  }
+}
+
+.fade{
+opacity:0;
+-webkit-transition:opacity .15s linear;
+-o-transition:opacity .15s linear;
+transition:opacity .15s linear
+}
+
+.fade.in{
+opacity:1
+}
+
+.dropdown,.dropup{
+position:relative
+}
+
+.dropdown-toggle:focus{
+outline:0
+}
+
+.dropdown-menu{
+position:absolute;
+top:100%;
+left:0;
+z-index:1000;
+display:none;
+float:left;
+
+	
+padding: 15px 0;
+margin:2px 0 0;
+text-align:left;
+list-style:none;
+background-color:#fff;
+box-shadow: 0 0 1px rgba(57,70,78,.15),0 20px 55px -8px rgba(57,70,78,.25);
+border:1px solid #f5f5f5;
+border-radius:4px; 
+font-family: 'Lato',sans-serif,Helvetica,Arial,sans-serif;
+font-size: 13px;
+color: #0b1017;
+text-shadow: 0px 1px 1px #fff;
+	
+}
+
+.dropdown-menu.pull-right{
+right:0;left:auto
+}
+
+.dropdown-menu .divider{
+height:1px;
+margin:9px 0;
+overflow:hidden;
+background-color:#f5f5f5;
+}
+
+.dropdown-menu>li>a{
+display:block;
+padding:3px 20px;
+clear:both; 
+line-height:1.42857143;
+color:#646464;
+white-space:nowrap;
+font-family: 'Lato',sans-serif,Helvetica,Arial,sans-serif;
+font-size: 13px;
+}
+
+.dropdown-menu>li>a:focus,.dropdown-menu>li>a:hover{
+color:#646464;
+text-decoration:none; 
+background:#f6f6f6;
+font-family: 'Lato',sans-serif,Helvetica,Arial,sans-serif;
+font-size: 13px;
+}
+
+.dropdown-menu>.active>a,.dropdown-menu>.active>a:focus,.dropdown-menu>.active>a:hover{
+color:#646464;
+text-decoration:none;
+background-color:#f6f6f6;
+outline:0; 
+font-family: 'Lato',sans-serif,Helvetica,Arial,sans-serif;
+font-size: 13px;
+}
+
+.dropdown-menu>.disabled>a,.dropdown-menu>.disabled>a:focus,.dropdown-menu>.disabled>a:hover{
+color:#646464; 
+background:#f6f6f6;
+font-family: 'Lato',sans-serif,Helvetica,Arial,sans-serif;
+font-size: 13px;
+}
+
+.dropdown-menu>.disabled>a:focus,.dropdown-menu>.disabled>a:hover{
+text-decoration:none;
+cursor:not-allowed;
+background-color:transparent;
+background-image:none;
+filter:progid:DXImageTransform.Microsoft.gradient(enabled=false)
+font-family: 'Lato',sans-serif,Helvetica,Arial,sans-serif;
+font-size: 13px;
+}
+
+.open>.dropdown-menu{
+display:block
+}
+
+.open>a{
+outline:0
+}
+
+.dropdown-menu-right{
+right:0;left:auto
+}
+
+.dropdown-menu-left{
+right:auto;left:0
+}	
+		
+.dropdown-menu:before {
+  position: absolute;
+  top: -7px;
+  left: 9px;
+  display: inline-block;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ccc;
+  border-left: 7px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  content: '';
+	font-family: 'Lato',sans-serif,Helvetica,Arial,sans-serif;font-size: 13px;
+}
+
+.dropdown-menu:after {
+  position: absolute;
+  top: -6px;
+  left: 10px;
+  display: inline-block;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #ffffff;
+  border-left: 6px solid transparent;
+  content: '';
+	font-family: 'Lato',sans-serif,Helvetica,Arial,sans-serif;font-size: 13px;
+}
+
+.buttonwrap {
+  position: absolute;
+  right: 65px;
+  top: 60px;
+  text-align: right;
+}]]>
+		</stylesheet>
+		<stylesheet name="global.css" version="1822"><![CDATA[/*
+ * MyBB: iGame Frontend Theme 
+ *
+ * File: global.css
+ * 
+ * Author: iAndrew, Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1822
+ * 
+ */
+
+body {
+	background: url(images/igame/2.jpg) no-repeat center center fixed;
+	color: #f1f1f1;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	text-align: center;
+	line-height: 1.4;
+	margin: 0;
+	font: normal 13px tahoma,helvetica,arial,sans-serif;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.select2-results,
+.select2-no-results,
+.select2-container{
+    text-shadow:none;
+}
+
+a:link {
+	color: #3f9889;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #3f9889;
+	text-decoration: none;
+}
+
+a:hover,
+a:active {
+	color: #f1f1f1;
+	text-decoration: none;
+	-webkit-transition: background-color 600ms linear, color 600ms linear;
+	-moz-transition: background-color 600ms linear, color 600ms linear;
+	-o-transition: background-color 600ms linear, color 600ms linear;
+	-ms-transition: background-color 600ms linear, color 600ms linear;
+	transition: background-color 600ms linear, color 600ms linear;
+}
+
+#container {
+	color: #eeeeee;
+	text-align: left;
+	line-height: 1.4;
+	margin: 0;
+	color: #f1f1f1;	
+	font-family: Tahoma, Verdana, Arial, Sans-Serif;
+	font-size: 13px;
+}
+
+.wrapper {
+	color: #f1f1f1;
+	margin: auto auto;
+}
+
+#logo {
+	padding: 10px 0;
+}
+
+#content {
+	background: rgba(255,255,255,0.4);
+	color: #f1f1f1;
+	padding: 10px 10px;
+	text-align: left;
+	line-height: 1.4;
+	margin: auto auto;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	border: 1px solid #ccc;
+	-webkit-box-shadow: rgba(0,0,0,0.4) 0px 1px 5px;
+	-moz-box-shadow: rgba(0,0,0,0.4) 0px 1px 5px;
+	box-shadow: rgba(0,0,0,0.4) 0px 1px 5px;
+	margin-bottom: 20px;
+	margin-top: -10px;
+}
+
+#header ul.menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#header ul.menu li {
+	margin: 0 7px;
+	display: inline;
+}
+
+#header ul.menu li a {
+	padding-left: 20px;
+	background-image: url(images/headerlinks_sprite.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+	line-height: 16px;
+}
+
+#logo ul.top_links {
+	font-weight: bold;
+	text-align: right;
+	margin: -10px 5px 0 0;
+}
+
+#logo ul.top_links a.search {
+	background-position: 0 0;
+}
+
+#logo ul.top_links a.memberlist {
+	background-position: 0 -20px;
+}
+
+#logo ul.top_links a.calendar {
+	background-position: 0 -40px;
+}
+
+#logo ul.top_links a.help {
+	background-position: 0 -60px;
+}
+
+#logo ul.top_links a.portal {
+	background-position: 0 -180px;
+}
+
+#panel .upper a.logout {
+	font-weight: bold;
+	background: url(images/headerlinks_sprite.png) right -80px no-repeat;
+	padding-right: 20px;
+	margin-left: 10px;
+}
+
+#panel .upper a.login,
+#panel .upper a.lost_password {
+	background: url(images/headerlinks_sprite.png) 0 -100px no-repeat;
+	padding-left: 20px;
+	margin-left: 10px;
+	font-weight: bold;
+}
+
+#panel .upper a.register {
+	background: url(images/headerlinks_sprite.png) right -80px no-repeat;
+	padding-right: 20px;
+	margin-left: 10px;
+	font-weight: bold;
+}
+
+#panel .lower ul.panel_links {
+	float: left;
+}
+
+#panel .lower ul.panel_links a.usercp {
+	background-position: 0 -120px;
+}
+
+#panel .lower ul.panel_links a.modcp {
+	background-position: 0 -140px;
+}
+
+#panel .lower ul.panel_links a.admincp {
+	background-position: 0 -160px;
+}
+
+#panel .lower ul.user_links {
+	float: right;
+}
+
+#panel .lower ul.user_links li a {
+	padding: 0;
+	background-image: none;
+}
+
+#panel .upper {
+	background: #0f0f0f url(images/tcat.png) repeat-x;
+	color: #fff;
+	border-top: 1px solid #444;
+	border-bottom: 1px solid #000;
+	padding: 7px;
+	clear: both;
+}
+
+#panel .upper a:link,
+#panel .upper a:visited,
+#panel .upper a:hover,
+#panel .upper a:active {
+	color: #fff;
+}
+
+#panel .lower {
+	background: #efefef;
+	color: #999;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #ccc;
+	padding: 5px;
+}
+
+#panel .lower a:link,
+#panel .lower a:visited,
+#panel .lower a:hover,
+#panel .lower a:active {
+	color: #666;
+}
+
+#search {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	float: right;
+	vertical-align: middle;
+}
+
+#search input.button,
+#search input.textbox {
+	border-color: #000;
+}
+
+#search input.button {
+	background: #0066a2 url(images/thead.png) top left repeat-x;
+	color: #fff;
+}
+
+#search input {
+	margin: -3px 0;
+}
+
+#quick_login .remember_me input {
+	vertical-align: middle;
+	margin: -3px 0 0 5px;
+}
+
+#footer ul.menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#footer ul.menu li {
+	margin: 0 2px;
+	display: inline;
+}
+
+#footer .upper {
+    font: normal 13px tahoma,helvetica,arial,sans-serif;
+	font-style: normal;
+     color: #f1f1f1;
+     text-shadow: 0px 1px 1px #181818;
+     padding: 6px;
+     overflow: hidden;
+    margin-left: 5px;
+    margin-right: 5px;
+      margin-top: -25px;
+}
+
+#footer .upper  a:link,
+#footer .upper  a:visited,
+#footer .upper  a:hover,
+#footer .upper  a:active {
+       color: #f1f1f1;
+       text-shadow: 0px 1px 1px #181818;
+}
+
+#footer .upper .language {
+	float: left;
+	margin: -1px;
+	margin-left: 2px;
+       color: #f1f1f1;
+     text-shadow: 1px 1px 0px #181818;
+}
+
+#footer .upper .language select {
+	border-color: #383838;
+       color: #f1f1f1;
+     text-shadow: 1px 1px 0px #181818;
+}
+
+#footer .upper .theme {
+	float: left;
+	margin: -1px;
+	margin-left: 2px;
+       color: #f1f1f1;
+     text-shadow: 1px 1px 0px #181818;
+}
+
+#footer .upper .theme select {
+	border-color: #383838;
+       color: #f1f1f1;
+     text-shadow: 1px 1px 0px #181818;
+}
+
+#footer .upper ul.bottom_links {
+	float: left;
+	margin: 4px 0 0 0;
+       color: #f1f1f1;
+     text-shadow: 1px 1px 0px #181818;
+}
+
+#footer .lower {
+    color: #f1f1f1;
+    text-shadow: 1px 1px 0px #181818;
+	padding: 10px;
+	padding: 6px 6px 12px 6px;
+	overflow: hidden;
+    font: normal 13px tahoma,helvetica,arial,sans-serif;
+	font-style: normal;
+}
+
+#footer .lower a:link,
+#footer .lower a:visited {
+    color: #f1f1f1;
+    text-shadow: 1px 1px 0px #181818;
+}
+
+#footer .lower a:hover,
+#footer .lower a:active {
+    color: #f1f1f1;
+    text-shadow: 1px 1px 0px #181818;
+	text-decoration: none;
+}
+
+#footer .lower #current_time {
+	float: right;
+    color: #f1f1f1;
+    text-shadow: 1px 1px 0px #181818;
+}
+
+#debug {
+	color: #fff;
+	float: center;
+	text-align: center;
+	font: normal 13px tahoma,helvetica,arial,sans-serif;
+	text-shadow: rgba(0,0,0,0.7) 0px 1px 1px;
+	
+	font-style: normal;
+}
+
+#debug a:link,
+#debug a:visited,
+#debug a:hover,
+#debug a:active {
+	color: #fff;
+}
+
+.scaleimages img {
+	max-width: 100%;
+}
+
+.forum_status {
+height: 50px;
+width: 50px;
+text-align: center;
+padding: 1px 2px;
+font-size: 25px;
+}
+
+.forum_status i {
+display: inline-block;
+line-height: 50px;
+}
+
+.forum_on {
+     color: #3f9889;
+}
+
+.forum_off, .forum_offclose, .forum_offlink {
+color: #646464;
+}
+
+.forum_off i {
+	color: #646464;
+}
+
+.forum_offclose i:before {
+content: "\f05e";
+  color: #646464;
+}
+
+.forum_offlink i:before {
+content: "\f079";
+    color: #646464;
+}
+
+.subforumicon {
+	height: 10px;
+	width: 10px;
+	display: inline-block;
+	margin: 0 5px;
+	background: url(images/mini_status_sprite.png) no-repeat 0 0;
+}
+
+.subforum_minion {
+	background-position: 0 0;
+}
+
+.subforum_minioff {
+	background-position: 0 -10px;
+}
+
+.subforum_minioffclose {
+	background-position: 0 -20px;
+}
+
+.subforum_miniofflink {
+	background-position: 0 -30px;
+}
+
+table {
+	color: #f1f1f1;
+	font-size: 13px;
+}
+
+.tborder {
+	background: transparent;
+	width: 100%;
+	margin: auto auto;
+	padding: 1px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.tfixed {
+	table-layout: fixed;
+	word-wrap: break-word;
+}
+
+.thead {
+	background: rgba(15,15,15,0.95);
+	color: #fff;
+	-webkit-box-shadow: rgba(0,0,0,0.7) 0px 1px 8px, inset rgba(0,0,0,0.4) 0px 0px 0px 1px;
+	-moz-box-shadow: rgba(0,0,0,0.7) 0px 1px 8px, inset rgba(0,0,0,0.4) 0px 0px 0px 1px;
+	box-shadow: rgba(0,0,0,0.7) 0px 1px 8px, inset rgba(0,0,0,0.4) 0px 0px 0px 1px;
+	text-shadow: 0px 1px 1px #000;
+	padding: 10px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	border-bottom: 6px solid #3f9889;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 17px;
+}
+
+.thead a:link {
+	color: #ffffff;
+	text-shadow: 0px 1px 1px #000;
+	
+	text-decoration: none;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 17px;
+}
+
+.thead a:visited {
+	color: #ffffff;
+	text-shadow: 0px 1px 1px #000;
+	
+	text-decoration: none;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 17px;
+}
+
+.thead a:hover,
+.thead a:active {
+	color: #ffffff;
+	text-shadow: 0px 1px 1px #000;
+	-webkit-transition: background-color 600ms linear, color 600ms linear;
+	-moz-transition: background-color 600ms linear, color 600ms linear;
+	-o-transition: background-color 600ms linear, color 600ms linear;
+	-ms-transition: background-color 600ms linear, color 600ms linear;
+	transition: background-color 600ms linear, color 600ms linear;
+	
+	text-decoration: none;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 17px;
+}
+
+.tcat {
+	background: rgba(15,15,15,0.95);
+	color: #ccc;
+	border-top: 1px solid #2e2e2e;
+	border-bottom: 1px solid #000;
+	text-shadow: 0px 1px 1px #000;
+	padding: 6px;
+	font: normal 13px tahoma,helvetica,arial,sans-serif;
+	font-size: 12px;
+}
+
+.tcat a:link {
+	color: #ccc;
+}
+
+.tcat a:visited {
+	color: #ccc;
+}
+
+.tcat a:hover,
+.tcat a:active {
+	color: #3f9889;
+	-webkit-transition: background-color 600ms linear, color 600ms linear;
+	-moz-transition: background-color 600ms linear, color 600ms linear;
+	-o-transition: background-color 600ms linear, color 600ms linear;
+	-ms-transition: background-color 600ms linear, color 600ms linear;
+	transition: background-color 600ms linear, color 600ms linear;
+}
+
+.trow1 {
+	background: rgba(15,15,15,0.95);
+	color: #f1f1f1;
+	border-top: 1px solid #2e2e2e;
+	border-bottom: 1px solid #000;
+	padding: 10px;
+	text-shadow: 0px 1px 1px #000;
+}
+
+.trow2 {
+	background: rgba(15,15,15,0.95);
+	color: #f1f1f1;
+	border-top: 1px solid #2e2e2e;
+	border-bottom: 1px solid #000;
+	padding: 10px;
+	text-shadow: 0px 1px 1px #000;
+}
+
+.trow_shaded {
+	background: #212121;
+	border-bottom: 1px solid #171717;
+  	border-top: 1px solid #383838;
+  	padding: 10px;
+  	color: #f1f1f1;
+    text-shadow: 0px 1px 1px #000;
+}
+
+.no_bottom_border {
+	border-bottom: 0;
+}
+
+.post.unapproved_post {
+	background: #ffdde0;
+}
+
+.post.unapproved_post .post_author {
+}
+
+.post.classic.unapproved_post .post_author {
+}
+
+.post.unapproved_post .post_controls {
+background: #212121;
+border-top: 1px solid #383838;
+text-shadow: 0px 1px 1px #000;
+clear: both;
+padding: 5px;
+}
+
+.trow_deleted,
+.post.deleted_post {
+	background: #0e0e0e;
+	color: #fff;
+	text-shadow: 0px 1px 1px #000;
+	
+	
+	font-style: normal;
+}
+
+.trow_selected,
+tr.trow_selected td {
+	background: #0f0f0f;
+	border-bottom: 1px solid #000;
+	border-top: 1px solid #232323;
+	padding: 10px;
+	text-shadow: 0px 1px 1px #000;
+	-webkit-transition: background-color 600ms linear, color 600ms linear;
+	-moz-transition: background-color 600ms linear, color 600ms linear;
+	-o-transition: background-color 600ms linear, color 600ms linear;
+	-ms-transition: background-color 600ms linear, color 600ms linear;
+	transition: background-color 600ms linear, color 600ms linear;
+	
+	color: #f1f1f1;
+}
+
+.trow_selected a:link,
+.trow_selected a:visited,
+.trow_selected a:hover,
+.trow_selected a:active {
+	color: #f1f1f1;
+}
+
+.trow_sep {
+	background: rgba(15,15,15,0.95);
+	text-shadow: 0px 1px 1px #000;
+	border-top: 6px solid #3f9889;
+	border-bottom: 6px solid #3f9889;
+	padding: 10px;
+	
+	color: #fff;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.tfoot {
+	background: rgba(15,15,15,0.95);
+	color: #fff;
+	border-top: 1px solid #2e2e2e;
+	border-bottom: 1px solid #000;
+	padding: 8px;
+	text-shadow: 0px 1px 1px #000;
+	border-top: 6px solid #3f9889;
+	
+	-webkit-box-shadow: rgba(0,0,0,0.7) 0px 1px 8px, inset rgba(0,0,0,0.4) 0px 0px 0px 1px;
+	-moz-box-shadow: rgba(0,0,0,0.7) 0px 1px 8px, inset rgba(0,0,0,0.4) 0px 0px 0px 1px;
+	box-shadow: rgba(0,0,0,0.7) 0px 1px 8px, inset rgba(0,0,0,0.4) 0px 0px 0px 1px;
+	text-shadow: 0px 1px 1px #000;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	font-style: normal;
+}
+
+.tfoot a:link {
+	color: #fff;
+	text-decoration: none;
+}
+
+.tfoot a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+.tfoot a:hover,
+.tfoot a:active {
+	color: #fff;
+	text-decoration: none;
+  	-webkit-transition: background-color 600ms linear, color 600ms linear;
+	-moz-transition: background-color 600ms linear, color 600ms linear;
+	-o-transition: background-color 600ms linear, color 600ms linear;
+	-ms-transition: background-color 600ms linear, color 600ms linear;
+	transition: background-color 600ms linear, color 600ms linear;
+}
+
+.thead input.textbox,
+.thead select {
+	border: 1px solid #263c30;
+}
+
+.bottommenu {
+	background: #efefef;
+	color: #333;
+	border: 1px solid #4874a3;
+	padding: 10px;
+}
+
+.navigation {
+	background: rgba(15,15,15,0.95);
+	border: 1px solid #000;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	color: #ccc;
+	padding: 10px;
+	text-shadow: 0px 1px 1px #000;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	-webkit-box-shadow: rgba(0,0,0,0.3) 0px 1px 4px, inset rgba(255,255,255,0.13) 0px 1px 0px;
+	-moz-box-shadow: rgba(0,0,0,0.3) 0px 1px 4px, inset rgba(255,255,255,0.13) 0px 1px 0px;
+	box-shadow: rgba(0,0,0,0.3) 0px 1px 4px, inset rgba(255,255,255,0.13) 0px 1px 0px;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.navigation a:link {
+	text-decoration: none;
+  	color: #ccc;
+    text-shadow: 0px 1px 1px #000;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.navigation a:visited {
+	text-decoration: none;
+  	color: #ccc;
+    text-shadow: 0px 1px 1px #000;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.navigation a:hover,
+.navigation a:active {
+	text-decoration: none;
+  	color: #fff;
+    text-shadow: 0px 1px 1px #000;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.navigation .active {
+	color: #ccc;
+    text-shadow: 0px 1px 1px #000;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.smalltext {
+   font-family: 'Roboto Condensed', sans-serif;
+   font-size: 14px;
+   font-style: normal;
+}
+
+.largetext {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: bold;
+}
+
+fieldset {
+	background: rgba(15,15,15,0.95);
+	color: #fff;
+	padding: 12px;
+	border: 1px dashed #222222;
+	margin: 0;
+}
+
+fieldset.trow1,
+fieldset.trow2 {
+	background: rgba(15,15,15,0.95);
+	color: #fff;
+	border: 1px dashed #222222;
+}
+
+fieldset.align_right {
+	background: rgba(15,15,15,0.95);
+	color: #fff;
+	text-align: right;
+}
+
+input.textbox {
+	background: #181818;
+	color: #fff;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	border: 1px solid #2e2e2e;
+	padding: 4px 6px;
+	line-height: 1.4;
+	outline: 0;
+	-webkit-box-shadow: 0 0 0px 1000px #181818 inset !important;
+	-webkit-text-fill-color: white !important;
+	
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 13px;
+	font-style: normal;
+}
+
+textarea {
+	background: #181818;
+	color: #fff;
+	-webkit-box-shadow: inset rgba(0,0,0,0.4) 0px 0px 0px 1px;
+	-moz-box-shadow: inset rgba(0,0,0,0.4) 0px 0px 0px 1px;
+	box-shadow: inset rgba(0,0,0,0.4) 0px 0px 0px 1px;
+	padding: 5px;
+	line-height: 1.4;
+	outline: 0;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-box-shadow: 0 0 0px 1000px #181818 inset !important;
+	-webkit-text-fill-color: white !important;
+	border: 1px solid #2e2e2e;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 13px;
+	font-style: normal;
+}
+
+select {
+  	background: rgba(15,15,15,0.95);
+	-webkit-box-shadow: inset rgba(0,0,0,0.4) 0px 0px 0px 1px;
+	-moz-box-shadow: inset rgba(0,0,0,0.4) 0px 0px 0px 1px;
+	box-shadow: inset rgba(0,0,0,0.4) 0px 0px 0px 1px;
+	color: #f1f1f1;
+	border: 1px solid #222222;
+	padding: 3px;
+	line-height: 1.4;
+	outline: 0;
+    -moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 13px;
+    font-style: normal;
+}
+
+button,
+input.button {
+  	 background-image: linear-gradient(#272727, #212121);
+      color: #ffffff;
+      border: 1px solid #000;
+      text-shadow: 1px 1px 0px #161617;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+       border-radius: 2px;
+      -webkit-box-shadow: rgba(0,0,0,0.3) 0px 1px 4px, inset rgba(255,255,255,0.13) 0px 1px 0px;
+      -moz-box-shadow: rgba(0,0,0,0.3) 0px 1px 4px, inset rgba(255,255,255,0.13) 0px 1px 0px;
+      box-shadow: rgba(0,0,0,0.3) 0px 1px 4px, inset rgba(255,255,255,0.13) 0px 1px 0px;
+     -moz-background-clip: padding;
+     -webkit-background-clip: padding-box;
+     background-clip: padding-box; 
+  	font-family: Source Sans Pro,Tahoma,Helvetica Neue,Arial,sans-serif;
+	font-size: 12px;
+	font-style: normal;  
+    padding: 4px 9px;
+	cursor: pointer;
+	outline: 0;
+}
+
+button:hover,
+input.button:hover {
+	color: #ddd;
+	-moz-transition: all 0ms ease 0s;
+	-webkit-transition: all 0ms ease 0s;
+	-o-transition: all 0ms ease 0s;
+	-ms-transition: all 0ms ease 0s;
+}
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+form input.error {
+	background: rgba(15,15,15,0.95);
+border: 1px solid #232323;
+text-shadow: 0px 1px 1px #171717;
+  	color: #fff;
+	padding: 3px;
+	outline: 0;
+	font-family: Source Sans Pro,Tahoma,Helvetica Neue,Arial,sans-serif;
+	font-size: 14px;
+	font-style: normal;
+}
+
+form input.valid {
+	background: rgba(15,15,15,0.95);
+border: 1px solid #232323;
+text-shadow: 0px 1px 1px #171717;
+  	color: #fff;
+	padding: 3px;
+	outline: 0;
+}
+
+form label.error {
+	color: #f30;
+	margin: 5px;
+	padding: 0px;
+	display: block;
+	font-weight: bold;
+}
+
+form #message {
+    width: 500px;
+}
+
+.editor {
+	background: rgba(15,15,15,0.95);
+border: 1px solid #232323;
+text-shadow: 0px 1px 1px #171717;
+  	color: #fff;
+}
+
+.editor_control_bar {
+	background: rgba(15,15,15,0.95);
+border: 1px solid #232323;
+text-shadow: 0px 1px 1px #171717;
+  	color: #fff;
+}
+
+.post .editor_control_bar {
+	background: rgba(15,15,15,0.95);
+border: 1px solid #232323;
+text-shadow: 0px 1px 1px #171717;
+  	color: #fff;
+}
+
+.popup_menu {
+	background: rgba(15,15,15,0.95);
+	text-shadow: 1px 1px 0px #000;
+	padding: 6px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.7);
+	-moz-box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.7);
+	box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.7 );
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	z-index: 999999;
+	
+	text-decoration: none;
+	font-family: Source Sans Pro,Tahoma,Helvetica Neue,Arial,sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.popup_menu .popup_item {
+	color: #ccc;
+	text-shadow: 1px 1px 0px #000;
+	
+	font-style: normal;
+	font-weight: normal;
+}
+
+.popup_menu .popup_item:hover {
+	background: 3f9889;
+	color: #fff;
+	text-shadow: rgba(0,0,0,0.25) 0px 1px 1px;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.trow_reputation_positive {
+		background: rgba(15,15,15,0.95);
+border: 1px solid #232323;
+text-shadow: 0px 1px 1px #171717;
+  	color: #fff;
+}
+
+.trow_reputation_negative {
+		background: rgba(15,15,15,0.95);
+border: 1px solid #232323;
+text-shadow: 0px 1px 1px #171717;
+  	color: #fff;
+}
+
+.reputation_positive {
+	color: green;
+}
+
+.reputation_neutral {
+	color: #444;
+}
+
+.reputation_negative {
+	color: red;
+}
+
+.repbox {
+	font-size:16px;
+	font-weight: bold;
+	padding:5px 7px 5px 7px;
+}
+
+._neutral {
+	background: rgba(15,15,15,0.95);
+border: 1px solid #232323;
+text-shadow: 0px 1px 1px #171717;
+  	color: #ccc;
+}
+
+._minus {
+  	background: rgba(15,15,15,0.95);
+border: 1px solid #232323;
+text-shadow: 0px 1px 1px #171717;
+  	color: #ccc;
+}
+
+._plus {
+	background: rgba(15,15,15,0.95);
+border: 1px solid #232323;
+text-shadow: 0px 1px 1px #171717;
+  	color: #ccc;
+}
+
+img {
+	border: none;
+}
+
+img.attachment {
+		background: rgba(15,15,15,0.95);
+border: 1px solid #232323;
+text-shadow: 0px 1px 1px #171717;
+  	color: #ccc;
+	padding: 2px;
+}
+
+hr {
+	background-color: #000;
+	color: #ccc;
+	height: 1px;
+	border: 0px;
+}
+
+.clear {
+	clear: both;
+}
+
+.float_left {
+	float: left;
+}
+
+.float_right {
+	float: right;
+}
+
+.hidden {
+	display: none;
+	float: none;
+	width: 1%;
+}
+
+.hiddenrow {
+	display: none;
+}
+
+.selectall {
+		background: rgba(15,15,15,0.95);
+border-bottom: 1px solid #232323;
+text-shadow: 0px 1px 1px #171717;
+  	color: #ccc;
+	text-align: center;
+}
+
+.expcolimage {
+	float: right;
+	width: auto;
+	vertical-align: middle;
+	margin-top: 3px;
+}
+
+.tcat_menu > .expcolimage {
+	margin-top: 0;
+}
+
+blockquote {
+	background: #232323;
+	color: #a1a1a1;
+	text-shadow: 0px 1px 1px #181818;
+	border-left: 6px solid #3f9889;
+	margin: 0;
+	padding: 20px;
+	-moz-border-top-left-radius: 3px;
+	-webkit-border-top-left-radius: 3px;
+	border-top-left-radius: 3px;
+	font: normal 13px tahoma,helvetica,arial,sans-serif;
+	
+	font-style: normal;
+}
+
+blockquote cite {
+	text-shadow: 0px 1px 1px #181818;
+	display: block;
+	margin: -15px -15px 5px -15px;
+	padding: 10px;
+	-moz-border-top-left-radius: 3px;
+	-webkit-border-top-left-radius: 3px;
+	border-top-left-radius: 3px;
+	-moz-border-top-right-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom: 1px dashed #383838;
+	
+	color: #a1a1a1;
+    font: normal 13px tahoma,helvetica,arial,sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+blockquote cite span {
+	color: #a1a1a1;
+	float: right;
+	text-shadow: 0px 1px 1px #181818;
+    font: normal 13px tahoma,helvetica,arial,sans-serif;
+	font-style: normal;
+}
+
+blockquote cite span.highlight {
+	float: none;
+	font-weight: bold;
+	padding-bottom: 0;
+}
+
+.codeblock {
+	background: #232323;
+	color: #a1a1a1;
+	text-shadow: 0px 1px 1px #181818;
+	border-left: 6px solid #b4b3b3;
+	-moz-border-top-left-radius: 3px;
+	-webkit-border-top-left-radius: 3px;
+	border-top-left-radius: 3px;
+	padding: 20px;
+	font: normal 13px tahoma,helvetica,arial,sans-serif;
+	-moz-border-top-left-radius: 3px;
+	-webkit-border-top-left-radius: 3px;
+	border-top-left-radius: 3px;
+	
+	font-style: normal;
+}
+
+.codeblock .title {
+	color: #a1a1a1;
+	border-bottom: 1px dashed #383838;
+	text-shadow: 1px 1px 0px #181818;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	font-weight: bold;
+	margin: -15px -15px 5px -15px;
+	padding: 10px;
+	-moz-border-top-left-radius: 3px;
+	-webkit-border-top-left-radius: 3px;
+	border-top-left-radius: 3px;
+	padding-bottom: 3px;
+	-moz-border-top-right-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	border-top-right-radius: 3px;
+    font: normal 13px tahoma,helvetica,arial,sans-serif;
+	font-style: normal;
+}
+
+.codeblock code {
+	overflow: auto;
+	height: auto;
+	max-height: 200px;
+	display: block;
+    font: normal 13px tahoma,helvetica,arial,sans-serif;
+	font-style: normal;
+}
+
+.smilie {
+	vertical-align: middle;
+}
+
+.smilie_pointer {
+	cursor: pointer;
+}
+
+.separator {
+	margin: 5px;
+	padding: 0;
+	height: 0px;
+	font-size: 1px;
+	list-style-type: none;
+}
+
+.popup_menu .popup_item_container {
+	margin: 1px;
+	text-align: left;
+}
+
+.popup_menu .popup_item {
+	display: block;
+	padding: 6px;
+	white-space: nowrap;
+	
+	text-decoration: none;
+}
+
+.popup_menu a.popup_item:hover {
+	background: #3f9889;
+	color: #fff;
+	text-shadow: rgba(0,0,0,0.25) 0px 1px 1px;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	
+	text-decoration: none;
+}
+
+.subject_new {
+	font-weight: bold;
+}
+
+.highlight {
+		background: rgba(15,15,15,0.95);
+border: 1px solid #232323;
+text-shadow: 0px 1px 1px #171717;
+  	color: #fff;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.pm_alert {
+	background: #3f9889;
+  	border: 1px solid #286d61;
+	text-shadow: rgba(0,0,0,0.4) 0px 1px 1px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	text-align: center;
+	padding: 6px 10px;
+	color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 13px;
+	font-style: normal;
+	font-weight: normal;
+        -webkit-box-shadow: rgba(0,0,0,0.3) 0px 1px 4px, inset rgba(255,255,255,0.13) 0px 1px 0px;
+      -moz-box-shadow: rgba(0,0,0,0.3) 0px 1px 4px, inset rgba(255,255,255,0.13) 0px 1px 0px;
+      box-shadow: rgba(0,0,0,0.3) 0px 1px 4px, inset rgba(255,255,255,0.13) 0px 1px 0px;
+}
+
+.pm_alert a:link,
+.pm_alert a:visited,
+.pm_alert a:hover,
+.pm_alert  a:active {
+	color: #fff;
+}
+
+.red_alert {
+	background: #646464;
+    border: 1px solid #323131;
+	text-shadow: rgba(0,0,0,0.4) 0px 1px 1px;
+        -webkit-box-shadow: rgba(0,0,0,0.3) 0px 1px 4px, inset rgba(255,255,255,0.13) 0px 1px 0px;
+      -moz-box-shadow: rgba(0,0,0,0.3) 0px 1px 4px, inset rgba(255,255,255,0.13) 0px 1px 0px;
+      box-shadow: rgba(0,0,0,0.3) 0px 1px 4px, inset rgba(255,255,255,0.13) 0px 1px 0px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	text-align: center;
+	padding: 6px 10px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;	
+	color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 13px;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.red_alert a:link,
+.red_alert a:visited,
+.red_alert a:hover,
+.red_alert  a:active {
+	color: #fff;
+}
+
+.high_warning {
+	color: #ffffff;
+}
+
+.moderate_warning {
+	color: #ffffff;
+}
+
+.low_warning {
+	color: #ffffff;
+}
+
+.online {
+	color: #15A018;
+}
+
+.offline {
+	color: #C7C7C7;
+}
+
+div.error {
+	padding: 5px 10px;
+		background: rgba(15,15,15,0.95);
+border-bottom: 2px solid #232323;
+  border-top: 2px solid #232323;
+text-shadow: 0px 1px 1px #171717;
+  	color: #ccc;
+	font-family: Source Sans Pro,Tahoma,Helvetica Neue,Arial,sans-serif;
+	font-size: 14px;
+	font-style: normal;
+}
+
+div.error p {
+	margin: 0;
+	color: #ccc;
+	font-weight: normal;
+}
+
+div.error p em {
+	font-style: normal;
+	font-weight: bold;
+	padding-left: 24px;
+	display: block;
+	color: #ccc;
+	background: url(images/error.png) no-repeat 0;
+}
+
+div.error ul {
+	margin-left: 24px;
+}
+
+.pagination {
+	font-family: Source Sans Pro,Tahoma,Helvetica Neue,Arial,sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	padding-top: 10px;
+	margin-bottom: 5px;
+}
+
+.tfoot .pagination,
+.tcat .pagination {
+	padding-top: 0;
+}
+
+.pagination .pages {
+	color: #000;
+}
+
+.pagination .pagination_current,
+.pagination a {
+    background: rgba(15,15,15,0.95);
+	color: #f1f1f1;
+	text-shadow: rgba(0,0,0,0.4) 0px 1px 1px;
+	-moz-box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+	-webkit-box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+	box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	padding: 3px 6px;
+}
+
+.pagination a {
+  	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.pagination .pagination_current {
+  background: #3f9889;
+  text-shadow: rgba(0,0,0,0.4) 0px 1px 1px;
+  -moz-box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+  -webkit-box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+  box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+	color: #fff;
+	padding: 3px 6px;
+  	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.pagination a:hover {
+	padding: 3px 6px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	
+	color: #fff;
+	text-decoration: none;
+}
+
+.pagination .go_page img {
+	margin-bottom: -4px;
+}
+
+.drop_go_page {
+border-bottom: 2px solid #232323;
+	padding: 4px;
+}
+
+.pagination_breadcrumb {
+		background: rgba(15,15,15,0.95);
+border: 2px solid #232323;
+text-shadow: 0px 1px 1px #171717;
+  	color: #ccc;
+	outline: 1px solid #232323;
+	padding: 5px;
+	margin-top: 5px;
+	font-weight: normal;
+}
+
+.pagination_breadcrumb_link {
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.thread_legend,
+.thread_legend dd {
+	margin: 0;
+	padding: 0;
+    	margin-top: -10px;
+}
+
+.thread_legend dd {
+	padding-bottom: 4px;
+	margin-right: 15px;
+  	margin-top: -10px;
+}
+
+.thread_legend img {
+	margin-right: 4px;
+	vertical-align: top;
+    	margin-top: -10px;
+}
+
+.forum_legend,
+.forum_legend dt,
+.forum_legend dd {
+	margin: 0;
+	padding: 0;
+  	color: #ccc;
+  	margin-top: 10px;
+}
+
+.forum_legend dd {
+	float: left;
+	margin-right: 10px;
+    color: #ccc;
+}
+
+.forum_legend dt {
+	margin-right: 10px;
+	float: left;
+    	color: #ccc;
+  	margin-top: -5px;
+}
+
+.success_message {
+	color: #00b200;
+	font-weight: bold;
+    font: normal 13px tahoma,helvetica,arial,sans-serif;
+	font-style: normal;
+	margin-bottom: 10px;
+}
+
+.error_message {
+	color: #C00;
+	font-weight: bold;
+    font: normal 13px tahoma,helvetica,arial,sans-serif;
+	font-style: normal;
+	margin-bottom: 10px;
+}
+
+#posts_container {
+	padding: 0;
+}
+
+.ignored_post {
+	border-top: 3px solid #232323;
+	padding: 15px;
+}
+
+.ignored_post .show_ignored_post {
+	margin-top: -15px;
+}
+
+.ignored_post .show_ignored_post a.button span {
+	background-position: 0 -400px;
+}
+
+.post {
+	overflow: hidden;
+}
+
+.post.classic {
+	padding-top: 15px;
+}
+
+.post .post_author {
+	color: #f1f1f1;
+	padding: 5px;
+	overflow: hidden;
+	font: normal 13px tahoma,helvetica,arial,sans-serif;
+	text-shadow: 0px 1px 1px #171717;
+	
+	font-style: normal;
+}
+
+.post.classic .post_author {
+	width: 15%;
+	float: left;
+	margin: 0 1% 15px 0;
+	padding: 5px 1%;
+	margin-top
+    font: normal 13px tahoma,helvetica,arial,sans-serif;
+	font-style: normal;
+  	text-shadow: 0px 1px 1px #171717;
+}
+
+.post .post_author .buddy_status {
+	vertical-align: middle;
+	margin-top: -4px;
+}
+
+.post .post_author div.author_avatar {
+	float: left;
+	margin-right: 3px;
+}
+
+.post.classic .post_author div.author_avatar {
+	float: none;
+	text-align: center;
+	margin-bottom: 8px;
+}
+
+.post .post_author div.author_avatar img {
+    padding: 3px; 
+   border: 1px solid #232323;
+  background: rgba(15,15,15,0.95);
+  -moz-border-radius: 5px; 
+  -webkit-border-radius: 5px; 
+  border-radius: 5px; 
+  position: relative;
+}
+
+.post .post_author div.author_information {
+	color: #f1f1f1;
+	float: left;
+	padding: 6px 8px;
+	font: normal 13px tahoma,helvetica,arial,sans-serif;
+	text-shadow: 0px 1px 1px #171717;
+	
+	font-style: normal;
+}
+
+.post.classic .post_author div.author_information {
+	color: #f1f1f1;
+	float: none;
+	padding: 0;
+	text-align: center;
+	font: normal 13px tahoma,helvetica,arial,sans-serif;
+	
+	font-style: normal;
+}
+
+.post .post_author div.author_statistics {
+	color: #f1f1f1;
+	float: right;
+	padding: 3px 10px 3px 5px;
+	line-height: 1.3;
+	font: normal 13px tahoma,helvetica,arial,sans-serif;
+	text-shadow: 0px 1px 1px #171717;
+	
+	font-style: normal;
+}
+
+.post.classic .post_author div.author_statistics {
+	color: #f1f1f1;
+	margin: 6px 0 0 0;
+	padding: 6px 6px 3px 6px;
+	float: left;
+	font: normal 13px tahoma,helvetica,arial,sans-serif;
+	text-shadow: 0px 1px 1px #171717;
+	
+	font-style: normal;
+}
+
+.post .post_head {
+	padding-bottom: 4px;
+	border-bottom: 1px dashed #383838;
+	margin-bottom: 4px;
+}
+
+.post .post_head span.post_date {
+	color: #a1a1a1;
+}
+
+.post .post_head span.edited_post {
+	color: #a1a1a1;
+}
+
+.post .post_head span.edited_post a {
+	color: #a1a1a1;
+}
+
+.post_body {
+	padding: 12px 0;
+}
+
+.post.classic .post_content {
+	float: left;
+	width: 79%;
+	padding: 0 1% 5px 1%;
+}
+
+.post_content {
+	padding: 9px 10px 5px 10px;
+}
+
+.post_content .signature {
+	color: #fff;
+	margin-top: 5px;
+	border-top: 1px dashed #383838;
+	padding: 10px 0 4px 0;
+}
+
+.post .post_meta {
+	color: #f1f1f1;
+	margin: 4px 0;
+}
+
+.post .post_meta a:link,
+.post .post_meta a:visited {
+	color: #a1a1a1;
+}
+
+.post .post_meta a:hover,
+.post .post_meta a:active {
+	color: #f1f1f1;
+}
+
+.post_controls {
+	background: #0f0f0f;
+	border-top: 1px solid #232323;
+	text-shadow: 0px 1px 1px #171717;
+	clear: both;
+	padding: 5px;
+	overflow: hidden;
+	
+	color: #f1f1f1;
+    font: normal 13px tahoma,helvetica,arial,sans-serif;
+	font-style: normal;
+}
+
+.postbit_buttons > a:link,
+.postbit_buttons > a:hover,
+.postbit_buttons > a:visited,
+.postbit_buttons > a:active {
+	background: #3f9889;
+	text-shadow: rgba(0,0,0,0.4) 0px 1px 1px;
+	-moz-box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+	-webkit-box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+	box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	display: inline-block;
+	padding: 4px 7px;
+	margin: 2px;
+	
+	color: #f1f1f1;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 13px;
+	font-style: normal;
+}
+
+.postbit_buttons > a:hover {
+	background: #646464;
+	color: #fff;
+	text-shadow: rgba(0,0,0,0.4) 0px 1px 1px;
+	
+	
+	transition: all 0.3s linear 0s;
+	-moz-transition: all 0.3s linear 0s;
+	-webkit-transition: all 0.3s linear 0s;
+}
+
+.postbit_buttons a span:before {
+   content: "";
+   display: inline-block;
+   font-family: FontAwesome;
+   font-weight: normal;
+   font-size: inherit;
+   text-rendering: auto;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   margin-right: 5px;
+   font-size: 13px;
+}
+
+.postbit_buttons a.postbit_find span:before {
+content: "\f002";
+}
+
+.postbit_buttons a.postbit_reputation_add span:before {
+content: "\f067";
+}
+
+.postbit_buttons a.postbit_email span:before {
+content: "\f0e0";
+}
+
+.postbit_buttons a.postbit_website span:before {
+content: "\f0ac";
+}
+
+.postbit_buttons a.postbit_pm span:before {
+content: "\f199";
+}
+
+.postbit_buttons a.postbit_quote span:before {
+content: "\f10e";
+}
+
+.postbit_buttons a.postbit_multiquote span:before {
+content: "\f055";
+}
+
+.postbit_buttons a.postbit_multiquote_on span:before {
+content: "\f056";
+   color: #DB1304;
+}
+
+.postbit_buttons a.postbit_edit span:before {
+content: "\f044";
+}
+
+.postbit_buttons a.postbit_qdelete span:before {
+content: "\f00d";
+}
+
+.postbit_buttons a.postbit_qrestore span:before {
+content: "\f067";
+}
+
+.postbit_buttons a.postbit_report span:before {
+content: "\f0a1";
+}
+
+.postbit_buttons a.postbit_warn span:before {
+content: "\f0e3";
+}
+
+.postbit_buttons a.postbit_purgespammer span:before {
+content: "\f071";
+}
+
+.postbit_buttons a.postbit_reply_pm span:before {
+content: "\f112";
+}
+
+.postbit_buttons a.postbit_reply_all span:before {
+content: "\f122";
+}
+
+.postbit_buttons a.postbit_forward_pm span:before {
+content: "\f064";
+}
+
+.postbit_buttons a.postbit_delete_pm span:before {
+content: "\f00d";
+}
+
+a.button:link,
+a.button:visited,
+a.button:active {
+	background: #646464;
+	color: #fff;
+	text-shadow: rgba(0,0,0,0.4) 0px 1px 1px;
+	-moz-box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+	-webkit-box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+	box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	display: inline-block;
+	padding: 6px 8px;
+	margin: 2px 2px 6px 2px;
+	transition: text-shadow 3s;
+	-moz-transition: text-shadow 3s;
+	-webkit-transition: text-shadow 3s;
+	-o-transition: text-shadow 3s;
+	
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 14px;
+}
+
+a.button:hover {
+	background: #3f9889;
+	color: #fff;
+	text-shadow: #82241f 0px 1px 1px;
+	-moz-box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+	-webkit-box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+	box-shadow: rgba(0,0,0,0.15) 0px 1px 3px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	transition: all 0.3s linear 0s;
+	-moz-transition: all 0.3s linear 0s;
+	-webkit-transition: all 0.3s linear 0s;
+}
+
+a.button:link,
+a.button:hover,
+a.button:visited,
+a.button:active {
+	text-shadow: 0 0 40px #fff;
+	
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 14px;
+}
+
+a.button.small_button {
+	margin: 0;
+	padding: 3px 6px;
+}
+
+a.button span {
+	padding: 1px;
+	display: inline-block;
+}
+
+a.button.new_thread_button span {
+	background-position: 0 -340px;
+}
+
+a.button.new_reply_button span {
+	background-position: 0 -360px;
+}
+
+a.button.closed_button span {
+	background-position: 0 -380px;
+}
+
+a.button.rate_user_button span {
+	background-position: 0 -400px;
+}
+
+a.button.add_buddy_button span {
+	background-position: 0 -440px;
+}
+
+a.button.remove_buddy_button span {
+	background-position: 0 -480px;
+}
+
+a.button.add_ignore_button span {
+	background-position: 0 -460px;
+}
+
+a.button.remove_ignore_button span {
+	background-position: 0 -500px;
+}
+
+a.button.report_user_button span {
+	background-position: 0 -520px;
+}
+
+.quick_jump {
+	background: url(images/jump.png) no-repeat 0;
+	width: 13px;
+	height: 13px;
+	padding-left: 13px; /* amount of padding needed for image to fully show */
+	margin-top: -3px;
+	border: none;
+}
+
+.pollbar {
+	background: url(images/pollbar.png) top left repeat-x;
+	border: 1px solid #3f3f3f;
+	height: 10px;
+}
+
+.pollbar .percent {
+	display: none;
+}
+
+.posticons_label {
+	white-space: nowrap;
+}
+
+/** jGrowl Start **/
+
+/** Special IE6 Style Positioning **/
+.ie6 {
+	position: absolute;
+}
+
+.ie6.top-right {
+	right: auto;
+	bottom: auto;
+	left: expression( ( 0 - jGrowl.offsetWidth + ( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth ) + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+.ie6.top-left {
+	left: expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+.ie6.bottom-right {
+	left: expression( ( 0 - jGrowl.offsetWidth + ( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth ) + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: expression( ( 0 - jGrowl.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+.ie6.bottom-left {
+	left: expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: expression( ( 0 - jGrowl.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+.ie6.center {
+	left: expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+	width: 100%;
+}
+
+/** jGrowl Styling **/
+.jGrowl {
+  z-index: 9999;
+  color: #ffffff;
+  font-size: 12px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: fixed;
+}
+
+.jGrowl.top-left {
+  left: 0px;
+  top: 0px;
+}
+
+.jGrowl.top-right {
+  right: 0px;
+  top: 0px;
+}
+
+.jGrowl.bottom-left {
+  left: 0px;
+  bottom: 0px;
+}
+
+.jGrowl.bottom-right {
+  right: 0px;
+  bottom: 0px;
+}
+
+.jGrowl.center {
+  top: 0px;
+  width: 50%;
+  left: 25%;
+}
+
+/** Cross Browser Styling **/
+
+.jGrowl.center .jGrowl-notification,
+.jGrowl.center .jGrowl-closer {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.jGrowl-notification {
+  background-color: #000000;
+  opacity: 0.9;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=(0.9*100));
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=(0.9*100));
+  zoom: 1;
+  width: 250px;
+  padding: 10px;
+  margin: 10px;
+  text-align: left;
+  display: none;
+  border-radius: 5px;
+  word-break: break-all;
+  min-height: 40px;
+}
+
+.jGrowl-notification .ui-state-highlight,
+.jGrowl-notification .ui-widget-content .ui-state-highlight,
+.jGrowl-notification .ui-widget-header .ui-state-highlight {
+  border: 1px solid #000;
+  background: #000;
+  color: #fff;
+}
+
+.jGrowl-notification .jGrowl-header {
+  font-weight: bold;
+  font-size: .85em;
+}
+
+.jGrowl-notification .jGrowl-close {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  z-index: 99;
+  float: right;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.jGrowl-closer {
+  background-color: #000000;
+  opacity: 0.9;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=(0.9*100));
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=(0.9*100));
+  zoom: 1;
+  width: 250px;
+  padding: 10px;
+  margin: 10px;
+  text-align: left;
+  display: none;
+  border-radius: 5px;
+  word-break: break-all;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  cursor: pointer;
+  font-size: .9em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.jGrowl-closer .ui-state-highlight,
+.jGrowl-closer .ui-widget-content .ui-state-highlight,
+.jGrowl-closer .ui-widget-header .ui-state-highlight {
+  border: 1px solid #000;
+  background: #000;
+  color: #fff;
+}
+
+/** Hide jGrowl when printing **/
+@media print {
+	.jGrowl {
+		display: none;
+}
+
+
+}
+
+/** jGrowl End **/
+
+/** Modal Start **/
+
+.modal {
+	background: #000;
+	display: none;
+	text-align: left;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+	border: 6px solid #2e2e2e;
+}
+
+.modal a.close-modal {
+	position: absolute;
+	top: -12.5px;
+	right: -12.5px;
+	display: block;
+	width: 30px;
+	height: 30px;
+	text-indent: -9999px;
+	background: url(images/close.png) no-repeat 0 0;
+}
+
+.modal-spinner {
+	display: none;
+	width: 64px;
+	height: 64px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-right: -32px;
+	margin-top: -32px;
+	background: url(images/spinner_big.gif) no-repeat center center;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-o-border-radius: 8px;
+	-ms-border-radius: 8px;
+	border-radius: 8px;
+}
+
+/** Modal End **/
+
+/** Impromptu Start **/
+
+/*! jQuery-Impromptu - v6.2.1 - 2015-05-10
+* http://trentrichardson.com/Impromptu
+* Copyright (c) 2015 Trent Richardson; Licensed MIT */
+
+.jqifade{
+	position: absolute; 
+	background-color: #777777;
+}
+
+iframe.jqifade{
+	display:block;
+	z-index:-1;
+}
+
+div.jqi{
+ 
+	width: 400px; 
+	max-width:90%;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+	position: absolute; 
+	background-color: #ffffff; 
+	font-size: 11px; 
+	text-align: left; 
+	border: solid 1px #eeeeee;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	padding: 7px;
+}
+
+div.jqi .jqicontainer{
+}
+
+div.jqi .jqiclose{
+ 
+	position: absolute;
+	top: 4px; right: -2px; 
+	width: 18px; 
+	cursor: default; 
+	color: #bbbbbb; 
+	font-weight: bold;
+}
+
+div.jqi .jqistate{
+	background-color: #fff;
+}
+
+div.jqi .jqititle{
+	padding: 5px 10px;
+	font-size: 16px; 
+	line-height: 20px; 
+	border-bottom: solid 1px #eeeeee;
+}
+
+div.jqi .jqimessage{
+ 
+	padding: 10px; 
+	line-height: 20px; 
+	color: #444444; 
+	overflow: auto;
+}
+
+div.jqi .jqibuttonshide{
+	display: none;
+}
+
+div.jqi .jqibuttons{
+ 
+	text-align: right; 
+	margin: 0 -7px -7px -7px;
+	border-top: solid 1px #e4e4e4; 
+	background-color: #f4f4f4;
+	border-radius: 0 0 6px 6px;
+	-moz-border-radius: 0 0 6px 6px;
+	-webkit-border-radius: 0 0 6px 6px;
+}
+
+div.jqi .jqibuttons button{
+ 
+	margin: 0;
+	padding: 15px 20px;
+	background-color: transparent;
+	font-weight: normal; 
+	border: none;
+	border-left: solid 1px #e4e4e4; 
+	color: #777; 
+	font-weight: bold; 
+	font-size: 12px;
+}
+
+div.jqi .jqibuttons button.jqidefaultbutton{
+	color: #489afe;
+}
+
+div.jqi .jqibuttons button:hover,
+div.jqi .jqibuttons button:focus{
+	color: #287ade;
+	outline: none;
+}
+
+div.jqi .jqibuttons button[disabled]{
+	color: #aaa;
+}
+
+.jqiwarning .jqi .jqibuttons{
+ 
+	background-color: #b95656;
+}
+
+/* sub states */
+div.jqi .jqiparentstate::after{
+ 
+	background-color: #777;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+	content: '';
+	position: absolute;
+	top:0;left:0;bottom:0;right:0;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+}
+
+div.jqi .jqisubstate{
+	position: absolute;
+	top:0;
+	left: 20%;
+	width: 60%;
+	padding: 7px;
+	border: solid 1px #eeeeee;
+	border-top: none;
+	border-radius: 0 0 6px 6px;
+	-moz-border-radius: 0 0 6px 6px;
+	-webkit-border-radius: 0 0 6px 6px;
+}
+
+div.jqi .jqisubstate .jqibuttons button{
+	padding: 10px 18px;
+}
+
+/* arrows for tooltips/tours */
+.jqi .jqiarrow{
+ position: absolute; height: 0; width:0; line-height: 0; font-size: 0; border: solid 10px transparent;
+}
+
+.jqi .jqiarrowtl{
+ left: 10px; top: -20px; border-bottom-color: #ffffff;
+}
+
+.jqi .jqiarrowtc{
+ left: 50%; top: -20px; border-bottom-color: #ffffff; margin-left: -10px;
+}
+
+.jqi .jqiarrowtr{
+ right: 10px; top: -20px; border-bottom-color: #ffffff;
+}
+
+.jqi .jqiarrowbl{
+ left: 10px; bottom: -20px; border-top-color: #ffffff;
+}
+
+.jqi .jqiarrowbc{
+ left: 50%; bottom: -20px; border-top-color: #ffffff; margin-left: -10px;
+}
+
+.jqi .jqiarrowbr{
+ right: 10px; bottom: -20px; border-top-color: #ffffff;
+}
+
+.jqi .jqiarrowlt{
+ left: -20px; top: 10px; border-right-color: #ffffff;
+}
+
+.jqi .jqiarrowlm{
+ left: -20px; top: 50%; border-right-color: #ffffff; margin-top: -10px;
+}
+
+.jqi .jqiarrowlb{
+ left: -20px; bottom: 10px; border-right-color: #ffffff;
+}
+
+.jqi .jqiarrowrt{
+ right: -20px; top: 10px; border-left-color: #ffffff;
+}
+
+.jqi .jqiarrowrm{
+ right: -20px; top: 50%; border-left-color: #ffffff; margin-top: -10px;
+}
+
+.jqi .jqiarrowrb{
+ right: -20px; bottom: 10px; border-left-color: #ffffff;
+}
+
+/** Impromptu End */
+
+/** Modal Start **/
+
+.blocker {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	z-index: 9999;
+	padding: 20px;
+	box-sizing: border-box;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.75);
+	text-align: center;
+}
+
+.blocker:before{
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -0.05em;
+}
+
+.blocker.behind {
+	background-color: transparent;
+}
+
+.modal {
+	width: 400px;
+	text-align: left;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	z-index: 2;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 0 10px #000;
+	-moz-box-shadow: 0 0 10px #000;
+	-o-box-shadow: 0 0 10px #000;
+	-ms-box-shadow: 0 0 10px #000;
+	box-shadow: 0 0 10px #000;
+}
+
+.modal a.close-modal {
+	position: absolute;
+	top: -12.5px;
+	right: -12.5px;
+	display: block;
+	width: 30px;
+	height: 30px;
+	text-indent: -9999px;
+	background: url(images/close.png) no-repeat 0 0;
+}
+
+.modal-spinner {
+	display: none;
+	width: 64px;
+	height: 64px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-right: -32px;
+	margin-top: -32px;
+	background: url(images/spinner_big.gif) no-repeat center center;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	border-radius: 3px;
+}
+
+/** Modal End **/		
+		]]>
+		</stylesheet>
+		<stylesheet name="css3.css" version="1822"><![CDATA[/*
+ * MyBB: iGame Frontend Theme 
+ *
+ * File: css3.css
+ * 
+ * Author: iAndrew, Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1822
+ * 
+ */
+
+tr td.trow1:first-child,
+tr td.trow2:first-child,
+tr td.trow_shaded:first-child {
+	border-left: 0;
+}
+
+tr td.trow1:last-child,
+tr td.trow2:last-child,
+tr td.trow_shaded:last-child {
+	border-right: 0;
+}
+
+.tborder {
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.tborder tbody tr:last-child td {
+	border-bottom: 0;
+  
+}
+
+.tborder tbody tr:last-child td:first-child {
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.tborder tbody tr:last-child td:last-child {
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.thead {
+	-moz-border-top-right-radius: 2px;
+	-webkit-border-top-right-radius: 2px;
+	border-top-right-radius: 2px;
+  	-moz-border-top-left-radius: 2px;
+	-webkit-border-top-left-radius: 2px;
+	border-top-left-radius: 2px;
+}
+
+.thead_collapsed {
+	-moz-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	border-radius: 2px;
+}
+
+.thead_left {
+	-moz-border-radius-topright: 0;
+	-webkit-border-top-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.thead_right {
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+.tcat_menu {
+	-moz-border-radius: 0 !important;
+	-webkit-border-radius: 0 !important;
+  	border-radius: 0 !important;
+}
+
+.tborder tbody:nth-last-child(2) .tcat_collapse_collapsed {
+	-moz-border-radius-bottomleft: 2px !important;
+	-moz-border-radius-bottomright: 2px !important;
+	-webkit-border-bottom-left-radius: 2px !important;
+	-webkit-border-bottom-right-radius: 2px !important;
+	border-bottom-left-radius: 2px !important;
+	border-bottom-right-radius: 2px !important;
+}
+
+button,
+input.button,
+input.textbox,
+input.invalid_field,
+input.valid_field,
+select,
+textarea,
+.editor_control_bar,
+blockquote,
+.codeblock,
+fieldset,
+.pm_alert,
+.red_alert,
+.popup_menu,
+.postbit_buttons > a,
+a.button {
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.post.classic .post_author {
+	-moz-border-radius: 0 2px 2px 0;
+	-webkit-border-radius: 0 2px 2px 0;
+	border-radius: 0 2px 2px 0;
+}
+
+.popup_menu .popup_item_container:first-child .popup_item {
+}
+
+.popup_menu .popup_item_container:last-child .popup_item {
+	-moz-border-radius-bottomleft: 2px;
+	-moz-border-radius-bottomright: 2px;
+	-webkit-border-bottom-left-radius: 2px;
+	-webkit-border-bottom-right-radius: 2px;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+
+.pagination a {
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.pollbar {
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		]]>
+		</stylesheet>
+		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1822"><![CDATA[/*
+ * MyBB: iGame Frontend Theme 
+ *
+ * File: thread_status.css
+ * 
+ * Author: iAndrew, Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1822
+ * 
+ */
+
+.thread_status {
+	display: inline-block;
+  	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat;
+}
+
+.thread_status.dot_folder {
+    position:relative;
+}
+
+.thread_status.dot_folder:before {
+	color: #fff;
+	position: absolute;
+	background-position: 0 0;
+	content: "\f114";
+	text-shadow: #000 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.dot_hotfolder {
+    position:relative;
+}
+
+.thread_status.dot_hotfolder:before {
+	color: #fff;
+	position: absolute;
+	background-position: 0 -20px;
+	content: "\f07b";
+	text-shadow: #000 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.dot_hotclosefolder {
+    position:relative;
+}
+
+.thread_status.dot_hotclosefolder:before {
+	color: #fff;
+	position: absolute;
+	background-position: 0 -40px;
+	content: "\f023";
+	text-shadow: #000 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.dot_closefolder {
+    position:relative;
+}
+
+.thread_status.dot_closefolder:before {
+	color: #fff;
+	position: absolute;
+	background-position: 0 -60px;
+	content: "\f023";
+	text-shadow: #000 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.dot_newfolder {
+    position:relative;
+}
+
+.thread_status.dot_newfolder:before {
+	color: #fff;
+	position: absolute;
+	background-position: 0 -80px;
+	content: "\f14a";
+	text-shadow: #000 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.dot_newhotfolder {
+    position:relative;
+}
+
+.thread_status.dot_newhotfolder:before {
+	color: #fff;
+	position: absolute;
+	background-position: 0 -100px;
+	content: "\f08a";
+	text-shadow: #000 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.dot_newhotclosefolder {
+    position:relative;
+}
+
+.thread_status.dot_newhotclosefolder:before {
+	color: #fff;
+	position: absolute;
+	background-position: 0 -120px;
+	content: "\f08a";
+	text-shadow: #000 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.dot_newclosefolder {
+    position:relative;
+}
+
+.thread_status.dot_newclosefolder:before {
+	color: #fff;
+	position: absolute;
+	background-position: 0 -140px;
+	content: "\f023";
+	text-shadow: #000 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.folder {
+    position:relative;
+}
+
+.thread_status.folder:before {
+	color: #fff;
+	position: absolute;
+	background-position: 0 -160px;
+	content: "\f115";
+	text-shadow: #000 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.hotfolder {
+    position:relative;
+}
+
+.thread_status.hotfolder:before {
+	color: #fff;
+	position: absolute;
+	background-position: 0 -180px;
+	content: "\f08a";
+	text-shadow: #000 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.hotclosefolder {
+    position:relative;
+}
+
+.thread_status.hotclosefolder:before {
+	color: #fff;
+	position: absolute;
+	background-position: 0 -200px;
+	content: "\f004";
+	text-shadow: #000 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.closefolder {
+    position:relative;
+}
+
+.thread_status.closefolder:before {
+	color: #fff;
+	position: absolute;
+	background-position: 0 -220px;
+	content: "\f023";
+	text-shadow: #000 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.movefolder {
+    position:relative;
+}
+
+.thread_status.movefolder:before {
+	color: #fff;
+	position: absolute;
+	background-position: 0 -240px;
+	content: "\f079";
+	text-shadow: #000 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.newfolder {
+    position:relative;
+}
+
+.thread_status.newfolder:before {
+	color: #fff;
+	position: absolute;
+	background-position: 0 -260px;
+	content: "\f07c";
+	text-shadow: #000 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.newhotfolder {
+    position:relative;
+}
+
+.thread_status.newhotfolder:before {
+	color: #fff;
+	position: absolute;
+	background-position: 0 -280px;
+	content: "\f004";
+	text-shadow: #000 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.newhotclosefolder {
+    position:relative;
+}
+
+.thread_status.newhotclosefolder:before {
+	color: #fff;
+	position: absolute;
+	background-position: 0 -300px;
+	content: "\f023";
+	text-shadow: #000 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}
+
+.thread_status.newclosefolder {
+    position:relative;
+}
+
+.thread_status.newclosefolder:before {
+	color: #fff;
+	position: absolute;
+	background-position: 0 -320px;
+	content: "\f023";
+	text-shadow: #000 0px 1px 1px;
+	font-family: FontAwesome;
+	font-size: 16px;
+}	]]>
+		</stylesheet>
+		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1822"><![CDATA[/*
+ * MyBB: iGame Frontend Theme 
+ *
+ * File: star_rating.css
+ * 
+ * Author: iAndrew, Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1822
+ * 
+ */
+
+.star_rating,
+.star_rating li a:hover,
+.star_rating .current_rating {
+	background: url(images/star_rating.png) left -1000px repeat-x;
+	vertical-align: middle;
+}
+
+.star_rating {
+	position: relative;
+	width:80px;
+	height:16px;
+	overflow: hidden;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-position: left top;
+}
+
+td .star_rating {
+	margin: auto;
+}
+
+.star_rating li {
+	display: inline;
+}
+
+.star_rating li a,
+.star_rating .current_rating {
+	position: absolute;
+	text-indent: -1000px;
+	height: 16px;
+	line-height: 16px;
+	outline: none;
+	overflow: hidden;
+	border: none;
+	top:0;
+	left:0;
+}
+
+.star_rating_notrated li a:hover {
+	background-position: left bottom;
+}
+
+.star_rating li a.one_star {
+	width:20%;
+	z-index:6;
+}
+
+.star_rating li a.two_stars {
+	width:40%;
+	z-index:5;
+}
+
+.star_rating li a.three_stars {
+	width:60%;
+	z-index:4;
+}
+
+.star_rating li a.four_stars {
+	width:80%;
+	z-index:3;
+}
+
+.star_rating li a.five_stars {
+	width:100%;
+	z-index:2;
+}
+
+.star_rating .current_rating {
+	z-index:1;
+	background-position: left center;
+}
+
+.star_rating_success,
+.success_message {
+	color: #00b200;
+	font-weight: bold;
+	font-size: 10px;
+	margin-bottom: 10px;
+}
+
+.inline_rating {
+	background: url(images/star_rating.png) left -1000px repeat-x;
+	float: left;
+	vertical-align: middle;
+	padding-right: 5px;
+}		]]>
+		</stylesheet>
+		<stylesheet name="usercp.css" attachedto="usercp.php|private.php" version="1822"><![CDATA[/*
+ * MyBB: iGame Frontend Theme 
+ *
+ * File: usercp.css
+ * 
+ * Author: iAndrew, Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1822
+ * 
+ */
+
+.usercp_nav_item {
+	display: block;
+	padding: 1px 0 1px 23px;
+	background-image: url(images/usercp_sprite.png);
+	background-repeat: no-repeat;
+}
+
+.usercp_nav_composepm {
+	background-position: 0 0;
+}
+
+.usercp_nav_pmfolder {
+	background-position: 0 -20px;
+}
+
+.usercp_nav_sub_pmfolder {
+	padding-left: 40px;
+	background-position: 0 -40px;
+}
+
+.usercp_nav_trash_pmfolder {
+	padding-left: 40px;
+	background-position: 0 -60px;
+}
+
+.usercp_nav_pmtracking {
+	background-position: 0 -80px;
+}
+
+.usercp_nav_pmfolders {
+	background-position: 0 -100px;
+}
+
+.usercp_nav_profile {
+	background-position: 0 -120px;
+}
+
+.usercp_nav_email {
+	padding-left: 40px;
+	background-position: 0 -140px;
+}
+
+.usercp_nav_password {
+	padding-left: 40px;
+	background-position: 0 -160px;
+}
+
+.usercp_nav_username {
+	padding-left: 40px;
+	background-position: 0 -180px;
+}
+
+.usercp_nav_editsig {
+	padding-left: 40px;
+	background-position: 0 -200px;
+}
+
+.usercp_nav_avatar {
+	padding-left: 40px;
+	background-position: 0 -220px;
+}
+
+.usercp_nav_options {
+	background-position: 0 -240px;
+}
+
+.usercp_nav_usergroups {
+	background-position: 0 -260px;
+}
+
+.usercp_nav_editlists {
+	background-position: 0 -280px;
+}
+
+.usercp_nav_attachments {
+	background-position: 0 -300px;
+}
+
+.usercp_nav_drafts {
+	background-position: 0 -320px;
+}
+
+.usercp_nav_subscriptions {
+	background-position: 0 -340px;
+}
+
+.usercp_nav_fsubscriptions {
+	background-position: 0 -360px;
+}
+
+.usercp_nav_viewprofile {
+	background-position: 0 -380px;
+}
+
+.usercp_nav_home {
+	background-position: 0 -400px;
+}
+
+.usercp_notepad {
+	width: 99%;
+}
+
+.usercp_container {
+	margin: 5px;
+	padding: 8px;
+	border:1px solid #CCCCCC;
+}
+
+.pmspace {
+	float: right;
+	margin: -3px 5px;
+}
+
+.pmspace_container {
+	background: #fff;
+	border: 1px solid #ccc;
+	width: 100px;
+	display: inline-block;
+}
+
+.pmspace_used {
+	display: inline-block;
+	color: #fff;
+	margin: -1px;
+}
+
+.pmspace_used.low {
+	border: 1px solid #0c5a01;
+	background: #167203;
+}
+
+.pmspace_used.medium {
+	background: #ff862b;
+	border: 1px solid #d7611e;
+}
+
+.pmspace_used.high {
+	background: #e73c3c;
+	border: 1px solid #c00;
+}
+
+.pmspace_unused {
+	display: inline-block;
+}
+
+.pmspace_text {
+	padding: 1px 5px;
+	display: inline-block;
+}
+
+.new_pm {
+	font-weight: bold;
+}		]]>
+		</stylesheet>
+		<stylesheet name="showthread.css" attachedto="showthread.php" version="1822"><![CDATA[/*
+ * MyBB: iGame Frontend Theme 
+ *
+ * File: showthread.css
+ * 
+ * Author: iAndrew, Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1822
+ * 
+ */
+
+ul.thread_tools,
+ul.thread_tools li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul.thread_tools li {
+	padding-left: 24px;
+	padding-bottom: 4px;
+	margin-bottom: 3px;
+	font-size: 11px;
+	background-image: url(images/showthread_sprite.png);
+	background-repeat: no-repeat;
+}
+
+ul.thread_tools li.printable {
+	background-position: 0 0;
+}
+
+ul.thread_tools li.sendthread {
+	background-position: 0 -20px;
+}
+
+ul.thread_tools li.subscription_add {
+	background-position: 0 -40px;
+}
+
+ul.thread_tools li.subscription_remove {
+	background-position: 0 -60px;
+}
+
+ul.thread_tools li.poll {
+	background-position: 0 -80px;
+}
+
+.showthread_spinner {
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	padding: 20px;
+}		]]>
+		</stylesheet>
+		<stylesheet name="modcp.css" attachedto="modcp.php" version="1822"><![CDATA[/*
+ * MyBB: iGame Frontend Theme 
+ *
+ * File: modcp.css
+ * 
+ * Author: iAndrew, Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1822
+ * 
+ */
+
+.modcp_nav_item {
+	display: block;
+	padding: 1px 0 1px 23px;
+	background-image: url(images/modcp_sprite.png);
+	background-repeat: no-repeat;
+}
+
+.modcp_nav_home {
+	background-position: 0 0;
+}
+
+.modcp_nav_announcements {
+	background-position: 0 -20px;
+}
+
+.modcp_nav_reports {
+	background-position: 0 -40px;
+}
+
+.modcp_nav_modqueue {
+	background-position: 0 -60px;
+}
+
+.modcp_nav_modlogs {
+	background-position: 0 -80px;
+}
+
+.modcp_nav_editprofile {
+	background-position: 0 -100px;
+}
+
+.modcp_nav_banning {
+	background-position: 0 -120px;
+}
+
+.modcp_nav_warninglogs {
+	background-position: 0 -140px;
+}
+
+.modcp_nav_ipsearch {
+	background-position: 0 -160px;
+}
+
+.modqueue_message {
+	overflow: auto;
+	max-height: 250px;
+}
+
+.modqueue_controls {
+	width: 270px;
+	float: right;
+	text-align: center;
+	border: 1px solid #ccc;
+	background: #fff;
+	padding: 6px;
+	font-weight: bold;
+}
+
+.modqueue_controls label {
+	margin-right: 8px;
+}
+
+.label_radio_ignore,
+.label_radio_delete,
+.label_radio_approve {
+	font-weight: bold;
+}
+
+.modqueue_meta {
+	color: #444;
+	font-size: 95%;
+	margin-bottom: 8px;
+}
+
+.modqueue_mass {
+	list-style: none;
+	margin: 0;
+	width: 150px;
+	padding: 0;
+}
+
+.modqueue_mass li {
+	margin-bottom: 4px;
+	padding: 0;
+}
+
+.modqueue_mass li a {
+	display: block;
+	padding: 4px;
+	border: 1px solid transparent;
+}
+
+.modqueue_mass li a:hover {
+	background: #efefef;
+	border: 1px solid #ccc;
+	text-decoration: none;
+}		]]>
+		</stylesheet>
+	</stylesheets>
+	<templates>
+		<template name="footer" version="1822"><![CDATA[	</div>
+</div>
+
+
+
+
+<footer>
+	<div class="wrapper">
+		<div id="mainwidth2">	
+		<span class="smalltext">
+			{$lang->powered_by} <a href="https://mybb.com" target="_blank" rel="noopener">MyBB{$mybbversion}</a>, &copy; 2002-{$copy_year} <a href="https://mybb.com" target="_blank" rel="noopener">MyBB Group</a>
+			<i style="font-size: 9px;" class="fa fa-chevron-right fa-fw"></i> 
+			<a href="http://iandrew.org" target="_blank">Theme &copy; iAndrew 2018</a> &amp; <a href="http://community.mybb.com/user-6029.html" target="_blank">Vintagedaddyo 2020</a>
+			<span style="margin-top: -4px;" class="hide pull-right">{$theme_select}{$lang_select}</span>
+		</span>
+	</div>
+  </div>	
+</footer>
+
+
+
+<footer>
+<table width="100%" cellspacing="0" cellpadding="5" border="0">
+<tr>
+<td valign="top">
+		
+<div id="mainwidth2">	
+	
+<table width="100%" cellspacing="0" cellpadding="{$theme['tablespace']}" border="0">
+<tr>
+<td valign="top" width="22%">
+
+  <p>
+		<h3> Go Social</h3>		
+
+<div class="menu_simple">
+<ul>
+<li><a href="#"><i style="color: #3b5998; font-size: 16px;" class="fa fa-facebook fa-fw"></i>  Facebook</a></li>
+<li><a href="#"><i style="color: #55acee; font-size: 16px;" class="fa fa-twitter fa-fw"></i>  Twitter</a></li>
+<li><a href="#"><i style="color: #125688; font-size: 16px;" class="fa fa-instagram fa-fw"></i>  Instagram</a></li>
+<li><a href="#"><i style="color: #bb0000; font-size: 16px;" class="fa fa-youtube-play  fa-fw"></i>  Youtube </a></li>
+	</ul>
+</div>
+		
+	</p>	
+	
+	
+</td>
+<td>&nbsp;</td>
+<td valign="top" width="22%">
+	
+	
+		<p>
+		<h3> Navigation</h3>		
+
+<div class="menu_simple">
+<ul>
+<li><a href="#top">{$lang->bottomlinks_returntop}</a></li>
+<li><a href="<archive_url>">{$lang->bottomlinks_litemode}</a></li>
+<li><a href="{$mybb->settings['bburl']}/misc.php?action=syndication">{$lang->bottomlinks_syndication}</a></li>
+<li><a href="{$mybb->settings['contactlink']}">{$lang->bottomlinks_contactus}</a><li>
+</ul>
+</div>
+		
+		</p>	
+
+</td>
+<td>&nbsp;</td>
+<td valign="top" width="22%">
+	
+	
+		<p>
+		<h3> Extra Menu</h3>
+		
+<div class="menu_simple">
+<ul>
+<li><a href="{$mybb->settings['homeurl']}">{$mybb->settings['homename']}</a></li>
+<li><a href="{$mybb->settings['bburl']}/stats.php">Forum Statistics</a></li>
+<li><a href="{$mybb->settings['bburl']}/showteam.php">{$lang->bottomlinks_forumteam}</a></li>
+<li><a href="{$mybb->settings['bburl']}/misc.php?action=markread{$post_code_string}">{$lang->bottomlinks_markread}</a></li>
+
+</ul>
+</div>
+		
+		
+		</p>	
+
+</td>
+<td>&nbsp;</td>
+<td valign="top">
+	
+	
+    <p>
+	<h3> About us</h3>
+<span style="color: #fff;">			
+	
+	
+	
+	
+	
+Quisque mi odio, malesuada eu elit ut, euismod rutrum purus. Maecenas ullamcorper volutpat feugiat.	<br /><br />
+Quisque mi odio, malesuada eu elit ut, euismod rutrumt feugiat.
+
+	
+		</span>		
+		</p>	
+
+</td>
+</tr>
+</table>
+	
+	
+	
+	
+	
+	
+
+</div>		
+</td>
+</tr>
+</table>
+</footer>
+
+
+
+                <!-- MyBB is free software developed and maintained by a volunteer community.
+					It would be much appreciated by the MyBB Group if you left the full copyright and "powered by" notice intact,
+					to show your support for MyBB.  If you choose to remove or modify the copyright below,
+					you may be refused support on the MyBB Community Forums.
+
+					This is free software, support us and we'll support you. -->
+				<!-- End powered by --> 
+		
+<!-- The following piece of code allows MyBB to run scheduled tasks. DO NOT REMOVE -->{$task_image}<!-- End task image code -->
+{$auto_dst_detection}
+</div>
+
+        <br />
+
+         <debugstuff>
+	</div>]]></template>
+		<template name="forumbit_depth1_cat" version="1817"><![CDATA[<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<thead>
+<tr>
+<td class="thead{$expthead}" colspan="5">
+<div class="expcolimage"><img src="{$theme['imgdir']}/{$expcolimage}" id="cat_{$forum['fid']}_img" class="expander" alt="{$expaltext}" title="{$expaltext}" /></div>
+<div><strong><a href="{$forum_url}">{$forum['name']}</a></strong><br /><div class="smalltext">{$forum['description']}</div></div>
+</td>
+</tr>
+</thead>
+<tbody style="{$expdisplay}" id="cat_{$forum['fid']}_e">
+
+{$sub_forums}
+</tbody>
+</table>
+<br />]]></template>
+		<template name="forumbit_depth2_cat" version="1822"><![CDATA[<tr>
+<td class="{$bgcolor}" align="center" valign="middle" width="1"><div class="forum_status forum_{$lightbulb['folder']} ajax_mark_read" title="{$lightbulb['altonoff']}" id="mark_read_{$forum['fid']}"><i class="fa fa-circle-o"></i></div></td>
+  
+<td class="{$bgcolor}" valign="middle">
+<strong><a href="{$forum_url}"><span class="threadtext">{$forum['name']}</span></a></strong> {$forum_viewers_text}
+<br />{$forum['description']} {$subforums}
+</td>
+  
+<td class="{$bgcolor}" valign="middle" align="right" width="8%" style="white-space: nowrap">
+{$posts}{$unapproved['unapproved_posts']}<span class="threadtext">  {$lang->forumbit_posts}</span>  
+</td>	
+	
+<td class="{$bgcolor}" valign="middle" align="center" width="8%" style="white-space: nowrap">
+{$threads}{$unapproved['unapproved_threads']}<span class="threadtext">  {$lang->forumbit_threads}</span>   	
+</td>
+	
+<td class="{$bgcolor}" valign="middle" align="left" width="21%" style="white-space: nowrap">{$lastpost}</td>
+	
+	
+</tr>]]></template>
+		<template name="forumbit_depth2_forum" version="1822"><![CDATA[<tr>
+<td class="{$bgcolor}" align="center" valign="middle" width="1"><div class="forum_status forum_{$lightbulb['folder']} ajax_mark_read" title="{$lightbulb['altonoff']}" id="mark_read_{$forum['fid']}"><i class="fa fa-circle-o"></i></div></td>
+  
+<td class="{$bgcolor}" valign="middle">
+<strong><a href="{$forum_url}"><span class="threadtext">{$forum['name']}</span></a></strong> {$forum_viewers_text}
+<br />{$forum['description']} {$subforums}
+</td>
+  
+<td class="{$bgcolor}" valign="middle" align="right" width="8%" style="white-space: nowrap">
+{$posts}{$unapproved['unapproved_posts']}<span class="threadtext">  {$lang->forumbit_posts}</span>  
+</td>	
+	
+<td class="{$bgcolor}" valign="middle" align="center" width="8%" style="white-space: nowrap">
+{$threads}{$unapproved['unapproved_threads']}<span class="threadtext">  {$lang->forumbit_threads}</span>   	
+</td>
+	
+<td class="{$bgcolor}" valign="middle" align="left" width="21%" style="white-space: nowrap">{$lastpost}</td>
+	
+	
+</tr>]]></template>
+		<template name="forumdisplay" version="1822"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']} - {$foruminfo['name']} </title>
+{$headerinclude}
+{$rssdiscovery}
+<script type="text/javascript">
+<!--
+	lang.no_new_posts = "{$lang->no_new_posts}";
+	lang.click_mark_read = "{$lang->click_mark_read}";
+	lang.inline_edit_description = "{$lang->inline_edit_description}";
+	lang.post_fetch_error = "{$lang->post_fetch_error}";
+// -->
+</script>
+<!-- jeditable (jquery) -->
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jeditable/jeditable.min.js"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/inline_edit.js?ver=1821"></script>
+</head>
+<body>
+{$header}
+{$moderatedby}
+{$rules}
+{$subforums}
+{$threadslist}
+{$usersbrowsing}
+{$footer}
+</body>
+</html>]]></template>
+		<template name="forumdisplay_thread" version="1817"><![CDATA[<tr class="inline_row">
+	<td align="center" class="{$bgcolor}{$thread_type_class}" width="2%"><span class="thread_status {$folder}" title="{$folder_label}">&nbsp;</span></td>
+	<td align="center" class="{$bgcolor}{$thread_type_class}" width="2%">{$icon}</td>
+	<td class="{$bgcolor}{$thread_type_class}">
+		{$attachment_count}
+		<div>
+          <span>{$prefix} {$gotounread}{$thread['threadprefix']}<span class="{$inline_edit_class} {$new_class}" id="tid_{$inline_edit_tid}"><a href="{$thread['threadlink']}">{$thread['subject']}</a></span>{$thread['multipage']}</span>
+			<div class="author smalltext">Topic started by {$thread['profilelink']}</div>
+		</div>
+	</td>
+	<td align="center" class="{$bgcolor}{$thread_type_class}"><a href="{$mybb->settings['bburl']}/misc.php?action=whoposted&tid={$thread['tid']}" onclick="MyBB.whoPosted({$thread['tid']}); return false;">{$thread['replies']}</a>{$unapproved_posts}</td>
+	<td align="center" class="{$bgcolor}{$thread_type_class}">{$thread['views']}</td>
+	{$rating}
+	<td class="{$bgcolor}{$thread_type_class}" style="white-space: nowrap; text-align: right;">
+		<span class="lastpost smalltext">{$lastpostdate}<br />
+		<a href="{$thread['lastpostlink']}">{$lang->lastpost}</a>: {$lastposterlink}</span>
+	</td>
+{$modbit}
+</tr>]]></template>
+		<template name="forumdisplay_threadlist" version="1822"><![CDATA[<div class="float_left">
+	{$multipage}
+</div>
+<div class="float_right">
+	{$newthread}
+</div>
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder clear">
+	<tr>
+		<td class="thead" colspan="{$colspan}">
+			<div class="float_right">
+				<span class="smalltext"><strong><a href="misc.php?action=markread&amp;fid={$fid}{$post_code_string}">{$lang->markforum_read}</a>{$addremovesubscription}{$clearstoredpass}</strong></span>
+			</div>
+			<div>
+				<strong>{$foruminfo['name']}</strong>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="tcat" colspan="3" width="66%"><span class="smalltext"><strong><a href="{$sorturl}&amp;sortby=subject&amp;order=asc">{$lang->thread}</a> {$orderarrow['subject']} / <a href="{$sorturl}&amp;sortby=starter&amp;order=asc">{$lang->author}</a> {$orderarrow['starter']}</strong></span></td>
+		<td class="tcat" align="center" width="7%"><span class="smalltext"><strong><a href="{$sorturl}&amp;sortby=replies&amp;order=desc">{$lang->replies}</a> {$orderarrow['replies']}</strong></span></td>
+		<td class="tcat" align="center" width="7%"><span class="smalltext"><strong><a href="{$sorturl}&amp;sortby=views&amp;order=desc">{$lang->views}</a> {$orderarrow['views']}</strong></span></td>
+		{$ratingcol}
+		<td class="tcat" align="right" width="20%"><span class="smalltext"><strong><a href="{$sorturl}&amp;sortby=lastpost&amp;order=desc">{$lang->lastpost}</a> {$orderarrow['lastpost']}</strong></span></td>
+		{$inlinemodcol}
+	</tr>
+	{$selectall}
+	{$announcementlist}
+	{$threads}
+	<tr>
+		<td class="tfoot" align="right" colspan="{$colspan}">
+			<form action="forumdisplay.php" method="get">
+				<input type="hidden" name="fid" value="{$fid}" />
+				<select name="sortby">
+					<option value="subject"{$sortsel['subject']}>{$lang->sort_by_subject}</option>
+					<option value="lastpost"{$sortsel['lastpost']}>{$lang->sort_by_lastpost}</option>
+					<option value="starter"{$sortsel['starter']}>{$lang->sort_by_starter}</option>
+					<option value="started"{$sortsel['started']}>{$lang->sort_by_started}</option>
+					{$ratingsort}
+					<option value="replies"{$sortsel['replies']}>{$lang->sort_by_replies}</option>
+					<option value="views"{$sortsel['views']}>{$lang->sort_by_views}</option>
+				</select>
+				<select name="order">
+					<option value="asc"{$ordersel['asc']}>{$lang->sort_order_asc}</option>
+					<option value="desc"{$ordersel['desc']}>{$lang->sort_order_desc}</option>
+				</select>
+				<select name="datecut">
+					<option value="1"{$datecutsel['1']}>{$lang->datelimit_1day}</option>
+					<option value="5"{$datecutsel['5']}>{$lang->datelimit_5days}</option>
+					<option value="10"{$datecutsel['10']}>{$lang->datelimit_10days}</option>
+					<option value="20"{$datecutsel['20']}>{$lang->datelimit_20days}</option>
+					<option value="50"{$datecutsel['50']}>{$lang->datelimit_50days}</option>
+					<option value="75"{$datecutsel['75']}>{$lang->datelimit_75days}</option>
+					<option value="100"{$datecutsel['100']}>{$lang->datelimit_100days}</option>
+					<option value="365"{$datecutsel['365']}>{$lang->datelimit_lastyear}</option>
+					<option value="9999"{$datecutsel['9999']}>{$lang->datelimit_beginning}</option>
+				</select>
+				{$prefixselect}
+				{$gobutton}
+			</form>
+		</td>
+	</tr>
+</table>
+<div class="float_left">
+	{$multipage}
+</div>
+<div class="float_right" style="margin-top: 4px;">
+	{$newthread}
+</div>
+<br class="clear" />
+<br />
+
+<div class="float_right" style="text-align: right;">
+	{$inlinemod}
+	{$searchforum}
+	{$forumjump}
+</div>
+<br class="clear" />
+{$inline_edit_js}]]></template>
+		<template name="forumdisplay_thread_multipage" version="1817"><![CDATA[ &nbsp;  <span class="pagination2 smalltext">{$threadpages}{$morelink}</span>]]></template>
+		<template name="forumdisplay_usersbrowsing" version="1817"><![CDATA[<br />
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<tr><td class="thead"><strong>{$lang->users_browsing_forum} </strong></td></tr>
+<tr><td class="trow1">
+<span class="smalltext"> {$onlinemembers}{$onlinesep}{$invisonline}{$onlinesep2}{$guestsonline}</span>
+</td></tr>
+</table><br>]]></template>
+		<template name="header" version="1822"><![CDATA[<div id="mainwidth"> 
+	
+<div id="main-menu-container">
+    <div id="main-menu">
+		
+<div class="bmenu">
+<ul>
+<li><a href="{$mybb->settings['bburl']}/portal.php"><i style="font-size: 16px;" class="fa fa-home fa-fw"></i> {$lang->toplinks_portal}</a></li>
+<li><a href="{$mybb->settings['bburl']}/index.php"><i style="font-size: 16px;" class="fa fa-comments fa-fw"></i> {$mybb->settings['bbname']}</a></li>
+<li><a href="{$mybb->settings['bburl']}/search.php"><i style="font-size: 16px;" class="fa fa-search fa-fw"></i> {$lang->toplinks_search}</a></li>
+<li><a href="{$mybb->settings['bburl']}/memberlist.php"><i style="font-size: 16px;" class="fa fa-users fa-fw"></i> {$lang->toplinks_memberlist}</a></li>
+<li><a href="{$mybb->settings['bburl']}/calendar.php"><i style="font-size: 16px;" class="fa fa-calendar fa-fw"></i> {$lang->toplinks_calendar}</a></li>
+<li><a href='javascript:;' id="extraslink"> More  <i style="font-size: 10px;" class="fa fa-chevron-down fa-fw"></i></a></li>
+<li><a href='javascript:;' id="sociallink"> Go Social  <i style="font-size: 10px;" class="fa fa-chevron-down fa-fw"></i></a></li>
+</ul>
+<br />
+</div> 	
+	
+   </div>
+</div>
+
+  <div id="extraslink_popup" class="popup_menu" style="z-index: 99999; display: none;">
+    <div class="popup_item_container">
+        <a href="{$mybb->settings['bburl']}/misc.php?action=help" class="popup_item">{$lang->toplinks_help}</a>
+      </div>
+      <div class="popup_item_container">
+        <a href="{$mybb->settings['bburl']}/stats.php" class="popup_item">Forum stats</a>
+      </div>
+      <div class="popup_item_container">
+        <a href="{$mybb->settings['bburl']}/showteam.php" class="popup_item">Show team</a>
+      </div>
+    <div class="popup_item_container">
+        <a href="{$mybb->settings['bburl']}/search.php?action=getnew" class="popup_item">{$lang->welcome_newposts}</a>
+      </div>
+      <div class="popup_item_container">
+        <a href="{$mybb->settings['bburl']}/search.php?action=getdaily" class="popup_item">{$lang->welcome_todaysposts}</a>
+      </div>
+  </div> 
+  
+    <div id="sociallink_popup" class="popup_menu" style="z-index: 99999; display: none;">
+    <div class="popup_item_container">
+        <a href="facebook.com" class="popup_item"><i style="color: #3b5998; font-size: 14px;" class="fa fa-facebook fa-fw"></i> Like us</a>
+      </div>
+      <div class="popup_item_container">
+       <a href="youtube.com" class="popup_item"><i style="color: #bb0000; font-size: 14px;" class="fa fa-youtube fa-fw"></i> Subscribe to us</a>
+      </div>
+      <div class="popup_item_container">
+       <a href="twitter.com" class="popup_item"><i style="color: #4099FF; font-size: 14px;" class="fa fa-twitter fa-fw"></i> Tweet us</a>
+      </div>
+    <div class="popup_item_container">
+       <a href="google.com" class="popup_item"><i style="color: #d34836; font-size: 14px;" class="fa fa-google fa-fw"></i> +1 us on google</a>
+      </div>
+  </div> 	
+	
+		<table width="100%" cellspacing="0" cellpadding="{$theme['tablespace']}" border="0">
+             <tr>
+                <td valign="center">
+					
+                <div id="logo">
+					<a href="{$mybb->settings['bburl']}/index.php"><img src="{$theme['logo']}" alt="{$mybb->settings['bbname']}" title="{$mybb->settings['bbname']}" /></a>
+					</div>
+					
+                      </td>
+                          <td>&nbsp;</td>
+                           <td valign="center"> 
+							   
+                             <div class="float_right">{$welcomeblock}</div>
+							   
+                              </td>
+                                 </tr>
+                                   </table>		  
+	   
+ <div class="container">
+       <div id="content"> 
+           <div class="wrapper">
+			   <navigation><br />
+				{$pm_notice}
+				{$remote_avatar_notice}
+				{$bannedwarning}
+				{$bbclosedwarning}
+				{$modnotice}
+				{$pending_joinrequests}
+				{$awaitingusers}
+				   
+
+				   
+<script type="text/javascript">
+// <!--
+    if(use_xmlhttprequest == "1")
+    {
+        $("#extraslink").popupMenu();
+    }
+// -->
+	
+$("document").ready(function($){
+    var nav = $('#main-menu-container');
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 125) {
+            nav.addClass("f-nav");
+        } else {
+            nav.removeClass("f-nav");
+        }
+    });
+});
+	
+</script>
+              
+              
+<script type="text/javascript">
+// <!--
+    if(use_xmlhttprequest == "1")
+    {
+        $("#sociallink").popupMenu();
+    }
+// -->
+</script>]]></template>
+		<template name="headerinclude" version="1822"><![CDATA[<link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
+<link rel="alternate" type="application/atom+xml" title="{$lang->latest_threads} (Atom 1.0)" href="{$mybb->settings['bburl']}/syndication.php?type=atom1.0" />
+
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css' />
+
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css' />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,200italic,400italic,600italic' rel='stylesheet' type='text/css' />
+
+<meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.js?ver=1821"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.plugins.min.js?ver=1821"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/general.js?ver=1821"></script>
+
+<script type="text/javascript" src="{$mybb->asset_url}/images/igame/bootstrap.min.js"></script>
+
+<!-- FontAwesome -->
+<!--<script src="https://use.fontawesome.com/d4e09fbff1.js"></script>-->
+<link rel="stylesheet" href="{$mybb->asset_url}/images/igame/fontawesome/css/font-awesome.min.css">
+
+<script type="text/javascript" src="{$mybb->asset_url}/images/igame/jquery.tipsy.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+<script> new WOW().init(); </script>
+
+<script type='text/javascript'> 
+jQuery(function() {
+jQuery("a").tipsy({gravity: jQuery.fn.tipsy.autoNS});
+jQuery("title").tipsy({gravity: jQuery.fn.tipsy.autoNS});
+jQuery("img").tipsy({gravity: jQuery.fn.tipsy.autoNS});
+jQuery("i").tipsy({gravity: jQuery.fn.tipsy.autoNS});
+jQuery("span").tipsy({gravity: jQuery.fn.tipsy.autoNS});
+jQuery("div").tipsy({gravity: jQuery.fn.tipsy.autoNS});
+});
+</script>
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    var offset = 100;
+    var duration = 250;
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery(".topforum").fadeIn(duration);
+        } else {
+            jQuery(".topforum").fadeOut(duration);
+        	}
+    });
+    
+    jQuery('.topforum').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, 600);
+        	return false;
+    	})
+});
+</script>
+
+{$stylesheets}
+
+<script type="text/javascript">
+<!--
+	lang.unknown_error = "{$lang->unknown_error}";
+
+	lang.select2_match = "{$lang->select2_match}";
+	lang.select2_matches = "{$lang->select2_matches}";
+	lang.select2_nomatches = "{$lang->select2_nomatches}";
+	lang.select2_inputtooshort_single = "{$lang->select2_inputtooshort_single}";
+	lang.select2_inputtooshort_plural = "{$lang->select2_inputtooshort_plural}";
+	lang.select2_inputtoolong_single = "{$lang->select2_inputtoolong_single}";
+	lang.select2_inputtoolong_plural = "{$lang->select2_inputtoolong_plural}";
+	lang.select2_selectiontoobig_single = "{$lang->select2_selectiontoobig_single}";
+	lang.select2_selectiontoobig_plural = "{$lang->select2_selectiontoobig_plural}";
+	lang.select2_loadmore = "{$lang->select2_loadmore}";
+	lang.select2_searching = "{$lang->select2_searching}";
+	
+	var templates = {
+		modal: '{$jsTemplates['modal']}',
+		modal_button: '{$jsTemplates['modal_button']}'
+	};
+	
+	var cookieDomain = "{$mybb->settings['cookiedomain']}";
+	var cookiePath = "{$mybb->settings['cookiepath']}";
+	var cookiePrefix = "{$mybb->settings['cookieprefix']}";
+	var cookieSecureFlag = "{$mybb->settings['cookiesecureflag']}";
+	var deleteevent_confirm = "{$lang->deleteevent_confirm}";
+	var removeattach_confirm = "{$lang->removeattach_confirm}";
+	var loading_text = '{$lang->ajax_loading}';
+	var saving_changes = '{$lang->saving_changes}';
+	var use_xmlhttprequest = "{$mybb->settings['use_xmlhttprequest']}";
+	var my_post_key = "{$mybb->post_code}";
+	var rootpath = "{$mybb->settings['bburl']}";
+	var imagepath = "{$theme['imgdir']}";
+  	var yes_confirm = "{$lang->yes}";
+	var no_confirm = "{$lang->no}";
+	var MyBBEditor = null;
+	var spinner_image = "{$theme['imgdir']}/spinner.gif";
+	var spinner = "<img src='" + spinner_image +"' alt='' />";
+	var modal_zindex = 9999;
+// -->
+</script>]]></template>
+		<template name="header_welcomeblock_guest" version="1822"><![CDATA[<div class="buttonwrap">
+<span style="color:white;"><strong>Not a member yet? Why not Sign up today </strong></span>
+<br />
+<a class="button login" href="{$mybb->settings['bburl']}/member.php?action=login" onclick="$('#quick_login').modal({ fadeDuration: 250, keepelement: true }); return false;"><font color="white"><i style="font-size: 16px;" class="fa fa-check-circle-o fa-fw"></i> {$lang->welcome_login}</font></a> 
+
+<a class="button2 register" href="{$mybb->settings['bburl']}/member.php?action=register"><font color="white"><i style="font-size: 16px;" class="fa fa-plus-circle fa-fw"></i>  {$lang->welcome_register} &nbsp;</font></a></div>
+
+
+
+				<div class="modal" id="quick_login" style="display: none;">
+					<form method="post" action="{$mybb->settings['bburl']}/member.php">
+						<input name="action" type="hidden" value="do_login" />
+						<input name="url" type="hidden" value="" />
+						<input name="quick_login" type="hidden" value="1" />
+						<input name="my_post_key" type="hidden" value="{$mybb->post_code}" />
+						<table width="100%" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" border="0" class="tborder">
+							<tr>
+								<td class="thead" colspan="2"><strong>{$lang->login}</strong></td>
+							</tr>
+							{$loginform}
+						</table>
+					</form>
+				</div>
+				<script type="text/javascript">
+					$("#quick_login input[name='url']").val($(location).attr('href'));
+				</script>]]></template>
+		<template name="header_welcomeblock_member" version="1822"><![CDATA[     <ul class="usermenu">
+       <li><a href="ucp.php" id="whatever_name"><font color="white">{$mybb->user['username']}  <i style="font-size: 9px;" class="fa fa-chevron-down fa-fw"></i>&nbsp;</font></a></li>
+      <li><a href="{$mybb->settings['bburl']}/private.php">{$lang->folder_inbox}</a> <a href="{$mybb->settings['bburl']}/private.php" id="pm_notification">{$mybb->user['pms_unread']}</a></li>
+			{$modcplink}
+			{$admincplink}
+		</ul>
+  
+
+
+    <div id="whatever_name_popup" class="popup_menu" style="display: none;">
+      <div class="popup_item_container">
+        <a href="{$mybb->settings['bburl']}/usercp.php" class="popup_item">{$lang->welcome_usercp}</a>
+      </div>
+      <div class="popup_item_container">
+        <a href="{$mybb->settings['bburl']}/usercp.php?action=profile" class="popup_item">{$lang->postbit_button_profile}</a>
+      </div>
+      <div class="popup_item_container">
+        <a href="{$mybb->settings['bburl']}/usercp.php?action=avatar" class="popup_item">Change Avatar</a>
+      </div>
+      <div class="popup_item_container">
+        <a href="{$mybb->settings['bburl']}/usercp.php?action=editsig" class="popup_item">Edit Signature</a>
+      </div>
+      <div class="popup_item_container">
+        <a href="{$mybb->settings['bburl']}/usercp.php?action=subscriptions" class="popup_item">Subscribed threads</a>
+      </div>
+      <div class="popup_item_container">
+        <a href="{$mybb->settings['bburl']}/usercp.php?action=editlists" class="popup_item">{$lang->welcome_open_buddy_list}</a>
+      </div>
+		<div class="popup_item_container">
+			<a href="{$mybb->settings['bburl']}/member.php?action=logout&amp;logoutkey={$mybb->user['logoutkey']}" class="popup_item">{$lang->welcome_logout}</a>
+		 </div>			
+  </div> 
+<script type="text/javascript">
+// <!--
+    if(use_xmlhttprequest == "1")
+    {
+        $("#whatever_name").popupMenu();
+    }
+// -->
+</script>]]></template>
+		<template name="index" version="1817"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']}</title>
+{$headerinclude}
+<script type="text/javascript">
+<!--
+	lang.no_new_posts = "{$lang->no_new_posts}";
+	lang.click_mark_read = "{$lang->click_mark_read}";
+// -->
+</script>
+</head>
+<body>
+{$header}
+{$forums}
+{$boardstats}
+
+<br class="clear" />
+{$footer}
+</body>
+</html>]]></template>
+		<template name="index_boardstats" version="1822"><![CDATA[<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<thead>
+<tr>
+<td class="thead{$collapsedthead['boardstats']}">
+<div class="expcolimage"><img src="{$theme['imgdir']}/collapse{$collapsedimg['boardstats']}.png" id="boardstats_img" class="expander" alt="{$expaltext}" title="{$expaltext}" /></div>
+<div><strong>{$lang->boardstats}</strong></div>
+</td>
+</tr>
+</thead>
+<tbody style="{$collapsed['boardstats_e']}" id="boardstats_e">
+{$whosonline}
+{$birthdays}
+{$forumstats}
+</tbody>
+</table>]]></template>
+		<template name="index_stats" version="1822"><![CDATA[<tr>
+<td class="trow1">
+  
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+		<tr>
+            <td>
+       <i style="font-size: 15px;" class="fa fa-comments-o fa-fw"></i>   
+              <span class="threadtext"> {$stats['numposts']} Replies </span>
+              
+			</td>
+          <td>
+       <i style="font-size: 15px;" class="fa fa-comments fa-fw"></i>  
+                <span class="threadtext">  {$stats['numthreads']} Topics </span> 
+			</td>
+          <td>
+       <i style="font-size: 15px;" class="fa fa-group fa-fw"></i> 
+            <span class="threadtext"> {$stats['numusers']} Members </span> 
+			</td>
+			<td>
+         <i style="font-size: 15px;" class="fa fa-user fa-fw"></i> 
+              <span class="threadtext">    Newest Member: {$stats['lastusername']} </span>
+               </td>
+          <td>
+            <i style="font-size: 15px;" class="fa fa-group fa-fw"></i> 
+            <span class="threadtext">    Most online was: {$mostonline['numusers']} </span>
+               </td>
+		</tr>
+</table>
+
+</td>
+</tr>]]></template>
+		<template name="index_whosonline" version="1817"><![CDATA[<tr>
+<td class="trow1">
+<span class="smalltext">{$lang->online_note}</span> - 
+  <span class="smalltext"> <a href="online.php">See who's online</a>
+<br />{$onlinemembers}  
+</span>
+</td>
+</tr>]]></template>
+		<template name="member_profile" version="1822"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']} - {$lang->profile}</title>
+{$headerinclude}
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/report.js?ver=1820"></script>
+<script>
+	$(document).ready(function(){
+	
+	$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content2').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})
+
+})
+	</script>
+	
+<style>
+			.container2{
+			margin: 0 auto;
+		}
+
+
+
+		ul.tabs{
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+		}
+		ul.tabs li{
+			background: none;
+			color: #fff;
+			display: inline-block;
+			padding: 10px 15px;
+			cursor: pointer;
+			margin-top: 10px;	
+			
+		}
+
+		ul.tabs li.current{
+		    background: rgba(15,15,15,0.95);
+			color: #fff;
+			    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+		}
+
+		.tab-content2{
+			display: none;
+			padding: 1px;
+			width: 100%
+			
+		}
+
+		.tab-content2.current{
+			display: inherit;
+		}
+	</style>	
+</head>
+<body>
+{$header}
+<div class="float_right" style="text-align: center">{$buddy_options}{$ignore_options}{$report_options}</div> <br /><br />
+<fieldset>
+	<table width="100%" cellspacing="0" cellpadding="0" border="0">
+		<tr>
+			<td width="75%">
+				<span class="largetext"><strong>{$formattedname}</strong></span><br />
+				<span class="smalltext">
+					({$usertitle})<br />
+					{$groupimage}
+					{$userstars}<br />
+					<br />
+					<strong>{$lang->registration_date}</strong> {$memregdate}<br />
+					<strong>{$lang->date_of_birth}</strong> {$membday} {$membdayage}<br />
+					<strong>{$lang->local_time}</strong> {$localtime}<br />
+					<strong>{$lang->postbit_status}</strong> {$online_status}
+				</span>
+			</td>
+			<td width="25%" align="right" valign="middle">{$avatar}</td>
+		</tr>
+	</table>
+</fieldset>
+<br />
+	
+	
+<div class="container2">
+
+	<ul class="tabs">
+		<li class="tab-link current" data-tab="tab-1"> {$lang->users_forum_info}</li>
+		<li class="tab-link" data-tab="tab-2">{$lang->users_contact_details}</li>
+		<li class="tab-link" data-tab="tab-3">Profile</li>
+		<li class="tab-link" data-tab="tab-4">{$lang->users_signature}</li>
+		<li class="tab-link" data-tab="tab-5">{$lang->mod_options}</li>
+	</ul>
+
+	<div id="tab-1" class="tab-content2 current">
+		
+		<br />
+		{$awaybit}{$bannedbit}
+<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="50%" valign="top">
+			<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+				<tr>
+					<td colspan="2" class="thead"><strong>{$lang->users_forum_info}</strong></td>
+				</tr>
+				<tr>
+					<td class="trow1" style="width: 30%;"><strong>{$lang->joined}</strong></td>
+					<td class="trow1">{$memregdate}</td>
+				</tr>
+				<tr>
+					<td class="trow2"><strong>{$lang->lastvisit}</strong></td>
+					<td class="trow2">{$memlastvisitdate}</td>
+				</tr>
+				<tr>
+					<td class="trow1"><strong>{$lang->total_posts}</strong></td>
+					<td class="trow1">{$memprofile['postnum']} ({$lang->ppd_percent_total}){$findposts}</td>
+				</tr>
+				<tr>
+					<td class="trow2"><strong>{$lang->total_threads}</strong></td>
+					<td class="trow2">{$memprofile['threadnum']} ({$lang->tpd_percent_total}){$findthreads}</td>
+				</tr>
+				<tr>
+					<td class="trow1"><strong>{$lang->timeonline}</strong></td>
+					<td class="trow1">{$timeonline}</td>
+				</tr>
+				{$referrals}
+				{$reputation}
+				{$warning_level}
+			</table>
+			{$contact_details}
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td width="50%" valign="top">
+			{$profilefields}
+			{$signature}
+		
+		</td>
+	</tr>
+</table>
+
+		
+		
+	</div>
+	<div id="tab-2" class="tab-content2">
+	<br />	{$contact_details}
+	</div>
+	<div id="tab-3" class="tab-content2">
+	<br />	{$profilefields}
+	</div>
+	<div id="tab-4" class="tab-content2">
+	<br />	{$signature}
+	</div>
+	<div id="tab-5" class="tab-content2">
+	<br />	
+		{$modoptions}{$adminoptions}
+	</div>
+</div>	
+	
+
+	
+{$footer}
+</body>
+</html>]]></template>
+		<template name="member_profile_contact_details" version="1822"><![CDATA[<br />
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder tfixed">
+	<colgroup>
+	<col style="width: 30%;" />
+	</colgroup>
+	<tr>
+		<td colspan="2" class="thead"><strong>{$lang->users_contact_details}</strong></td>
+	</tr>
+	{$website}
+	{$sendemail}
+	{$sendpm}
+	{$contact_fields['icq']}
+	{$contact_fields['skype']}
+	{$contact_fields['google']}
+</table>]]></template>
+		<template name="postbit" version="1817"><![CDATA[<br />
+<div class="newposts">
+	
+{$ignore_bit}{$deleted_bit}
+<a name="pid{$post['pid']}" id="pid{$post['pid']}"></a>
+<div class="post classic {$unapproved_shade}" style="{$post_visibility}" id="post_{$post['pid']}">
+<div class="post_author scaleimages">
+	{$post['useravatar']}
+	<div class="author_information">
+			<strong><span class="largetext">{$post['profilelink']}</span></strong> {$post['onlinestatus']}<br />
+			<span class="smalltext">
+				{$post['usertitle']}<br />
+				{$post['userstars']}
+				{$post['groupimage']}
+			</span>
+	</div>
+	<div class="author_statistics">
+		{$post['user_details']}
+	</div>
+</div>
+<div class="post_content">
+	<div class="post_head">
+		{$post['posturl']}
+		{$post['icon']}
+		<span class="post_date">{$post['postdate']} <span class="post_edit" id="edited_by_{$post['pid']}">{$post['editedmsg']}</span></span>
+	{$post['subject_extra']}
+	</div>
+	<div class="post_body scaleimages" id="pid_{$post['pid']}">
+		{$post['message']}
+	</div>
+	{$post['attachments']}
+	{$post['signature']}
+	<div class="post_meta" id="post_meta_{$post['pid']}">
+		{$post['iplogged']}
+		<div class="float_right">
+			{$post['poststatus']}
+		</div>
+	</div>
+	{$post['input_editreason']}
+</div>
+<div class="post_controls">
+	<div class="postbit_buttons author_buttons float_left">
+		{$post['button_email']}{$post['button_pm']}{$post['button_www']}{$post['button_find']}{$post['button_rep']}
+	</div>
+	<div class="postbit_buttons post_management_buttons float_right">
+		{$post['button_edit']}{$post['button_quickdelete']}{$post['button_quickrestore']}{$post['button_quote']}{$post['button_multiquote']}{$post['button_report']}{$post['button_warn']}{$post['button_purgespammer']}{$post['button_reply_pm']}{$post['button_replyall_pm']}{$post['button_forward_pm']}{$post['button_delete_pm']}
+	</div>
+</div>
+</div>
+
+</div>]]></template>
+		<template name="postbit_classic" version="1817"><![CDATA[<br />
+<div class="newposts">
+	
+{$ignore_bit}{$deleted_bit}
+<a name="pid{$post['pid']}" id="pid{$post['pid']}"></a>
+<div class="post classic {$unapproved_shade}" style="{$post_visibility}" id="post_{$post['pid']}">
+<div class="post_author scaleimages">
+	{$post['useravatar']}
+	<div class="author_information">
+			<strong><span class="largetext">{$post['profilelink']}</span></strong> {$post['onlinestatus']}<br />
+			<span class="smalltext">
+				{$post['usertitle']}<br />
+				{$post['userstars']}
+				{$post['groupimage']}
+			</span>
+	</div>
+	<div class="author_statistics">
+		{$post['user_details']}
+	</div>
+</div>
+<div class="post_content">
+	<div class="post_head">
+		{$post['posturl']}
+		{$post['icon']}
+		<span class="post_date">{$post['postdate']} <span class="post_edit" id="edited_by_{$post['pid']}">{$post['editedmsg']}</span></span>
+	{$post['subject_extra']}
+	</div>
+	<div class="post_body scaleimages" id="pid_{$post['pid']}">
+		{$post['message']}
+	</div>
+	{$post['attachments']}
+	{$post['signature']}
+	<div class="post_meta" id="post_meta_{$post['pid']}">
+		{$post['iplogged']}
+		<div class="float_right">
+			{$post['poststatus']}
+		</div>
+	</div>
+	{$post['input_editreason']}
+</div>
+<div class="post_controls">
+	<div class="postbit_buttons author_buttons float_left">
+		{$post['button_email']}{$post['button_pm']}{$post['button_www']}{$post['button_find']}{$post['button_rep']}
+	</div>
+	<div class="postbit_buttons post_management_buttons float_right">
+		{$post['button_edit']}{$post['button_quickdelete']}{$post['button_quickrestore']}{$post['button_quote']}{$post['button_multiquote']}{$post['button_report']}{$post['button_warn']}{$post['button_purgespammer']}{$post['button_reply_pm']}{$post['button_replyall_pm']}{$post['button_forward_pm']}{$post['button_delete_pm']}
+	</div>
+</div>
+</div>
+
+</div>]]></template>
+		<template name="showthread" version="1822"><![CDATA[<html>
+<head>
+<title>{$thread['subject']}</title>
+{$headerinclude}
+<script type="text/javascript">
+<!--
+	var quickdelete_confirm = "{$lang->quickdelete_confirm}";
+	var quickrestore_confirm = "{$lang->quickrestore_confirm}";
+	var allowEditReason = "{$mybb->settings['alloweditreason']}";
+	lang.save_changes = "{$lang->save_changes}";
+	lang.cancel_edit = "{$lang->cancel_edit}";
+	lang.quick_edit_update_error = "{$lang->quick_edit_update_error}";
+	lang.quick_reply_post_error = "{$lang->quick_reply_post_error}";
+	lang.quick_delete_error = "{$lang->quick_delete_error}";
+	lang.quick_delete_success = "{$lang->quick_delete_success}";
+	lang.quick_delete_thread_success = "{$lang->quick_delete_thread_success}";
+	lang.quick_restore_error = "{$lang->quick_restore_error}";
+	lang.quick_restore_success = "{$lang->quick_restore_success}";
+	lang.editreason = "{$lang->postbit_editreason}";
+	lang.post_deleted_error = "{$lang->post_deleted_error}";
+	lang.softdelete_thread = "{$lang->soft_delete_thread}";
+	lang.restore_thread = "{$lang->restore_thread}";	
+// -->
+</script>
+<!-- jeditable (jquery) -->
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/report.js?ver=1820"></script>
+<script src="{$mybb->asset_url}/jscripts/jeditable/jeditable.min.js"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/thread.js?ver=1822"></script>
+</head>
+<body>
+	{$header}
+	{$threadnotesbox}
+	{$pollbox}
+	<div class="float_left">
+		{$multipage}
+	</div>
+	<div class="float_right">
+		{$newreply}
+	</div>
+	{$ratethread}
+	<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder tfixed clear">
+		<tr>
+			<td class="thead">
+				<div class="float_right">
+					<span class="smalltext"><strong><a href="javascript:void(0)" id="thread_modes">{$lang->thread_modes}</a>{$threadnoteslink}</strong></span>
+				</div>
+				<div>
+					<strong>{$thread['displayprefix']}{$thread['subject']}</strong>
+				</div>
+			</td>
+		</tr>
+<tr><td id="posts_container">
+	<div id="posts">
+		{$posts}
+	</div>
+</td></tr>
+		<tr>
+			<td class="tfoot">
+				{$search_thread}
+				<div>
+					<strong>&laquo; <a href="{$next_oldest_link}">{$lang->next_oldest}</a> | <a href="{$next_newest_link}">{$lang->next_newest}</a> &raquo;</strong>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<div class="float_left">
+		{$multipage}
+	</div>
+	<div style="padding-top: 4px;" class="float_right">
+		{$newreply}
+	</div>
+	<br class="clear" />
+	{$quickreply}
+	{$threadexbox}
+	{$similarthreads}
+	<br />
+
+	<div class="float_right" style="text-align: right;">
+		{$moderationoptions}
+		{$forumjump}
+	</div>
+	<br class="clear" />
+	{$usersbrowsing}
+	{$footer}
+	<div id="thread_modes_popup" class="popup_menu" style="display: none;">
+<div class="popup_item_container"><a href="showthread.php?mode=linear&amp;tid={$tid}&amp;pid={$pid}#pid{$pid}" class="popup_item">{$lang->linear}</a></div>
+      
+<div class="popup_item_container"><a href="showthread.php?mode=threaded&amp;tid={$tid}&amp;pid={$pid}#pid{$pid}" class="popup_item">{$lang->threaded}</a></div>
+      <div class="border2"></div>
+<div class="popup_item_container"><a href="/printthread.php?tid={$tid}" class="popup_item">{$lang->view_printable}</a></div>
+      
+<div class="popup_item_container"><a href="usercp2.php?action={$add_remove_subscription}subscription&amp;tid={$tid}&amp;my_post_key={$mybb->post_code}" class="popup_item">{$add_remove_subscription_text}</a></div>
+      
+<div class="popup_item_container"><a href="polls.php?action=newpoll&amp;tid={$tid}" class="popup_item">{$lang->add_poll_to_thread}</a></div>
+      
+<div class="popup_item_container"><a href="sendthread.php?tid={$tid}" class="popup_item">{$lang->send_thread}</a></div>
+  </div>
+	<script type="text/javascript">
+	// <!--
+		if(use_xmlhttprequest == "1")
+		{
+			$("#thread_modes").popupMenu();
+		}
+	// -->
+	</script>
+	<script type="text/javascript">
+		$(".author_avatar img").error(function () {
+			$(this).unbind("error").closest('.author_avatar').remove();
+		});
+	</script>
+	<script type="text/javascript">
+		var thread_deleted = "{$thread_deleted}";
+		if(thread_deleted == "1")
+		{
+			$("#quick_reply_form, .new_reply_button, .thread_tools, .inline_rating").hide();
+			$("#moderator_options_selector option.option_mirage").attr("disabled","disabled");
+		}
+	</script>	
+</body>
+</html>]]></template>
+		<template name="showthread_usersbrowsing" version="1817"><![CDATA[<br />
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<tr><td class="thead"><strong>{$lang->users_browsing_thread} </strong></td></tr>
+<tr><td class="trow1">
+<span class="smalltext">{$onlinemembers}{$onlinesep}{$invisonline}{$onlinesep2}{$guestsonline}</span>
+</td></tr>
+</table>
+<br />]]></template>
+	</templates>
+</theme>
