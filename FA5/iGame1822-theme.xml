@@ -757,6 +757,10 @@ right:auto;left:0
  * 
  */
 
+#quickreply_spinner .fas {
+font-size: 36px;
+}
+
 body {
 	background: url(images/igame/2.jpg) no-repeat center center fixed;
 	color: #f1f1f1;
@@ -3374,11 +3378,11 @@ a.button {
 	color: #fff;
 	position: absolute;
 	background-position: 0 -100px;
-	content: "\f08a";
+	content: "\f004";
 	text-shadow: #000 0px 1px 1px;
     font-family: "Font Awesome 5 Free";	
-    font-weight: 900;	
 	font-size: 16px;
+	font-weight: 900;
 }
 
 .thread_status.dot_newhotclosefolder {
@@ -3389,11 +3393,11 @@ a.button {
 	color: #fff;
 	position: absolute;
 	background-position: 0 -120px;
-	content: "\f08a";
+	content: "\f004";
 	text-shadow: #000 0px 1px 1px;
-    font-family: "Font Awesome 5 Free";	
-    font-weight: 900;	
+    font-family: "Font Awesome 5 Free";		
 	font-size: 16px;
+	font-weight: 900;
 }
 
 .thread_status.dot_newclosefolder {
@@ -3433,10 +3437,9 @@ a.button {
 	color: #fff;
 	position: absolute;
 	background-position: 0 -180px;
-	content: "\f08a";
+	content: "\f004";
 	text-shadow: #000 0px 1px 1px;
-    font-family: "Font Awesome 5 Free";	
-    font-weight: 900;	
+    font-family: "Font Awesome 5 Free";		
 	font-size: 16px;
 }
 
@@ -3450,8 +3453,7 @@ a.button {
 	background-position: 0 -200px;
 	content: "\f004";
 	text-shadow: #000 0px 1px 1px;
-    font-family: "Font Awesome 5 Free";	
-    font-weight: 900;	
+    font-family: "Font Awesome 5 Free";		
 	font-size: 16px;
 }
 
@@ -3509,8 +3511,8 @@ a.button {
 	content: "\f004";
 	text-shadow: #000 0px 1px 1px;
     font-family: "Font Awesome 5 Free";	
-    font-weight: 900;	
 	font-size: 16px;
+	font-weight: 900;
 }
 
 .thread_status.newhotclosefolder {
@@ -4479,13 +4481,15 @@ $("document").ready(function($){
 
 <link rel="Shortcut icon" href="{$theme['imgdir']}/favicon.ico" />
 
-<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css' />
+<!--<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css' />-->
+
+<link href='{$mybb->asset_url}/images/igame/inc/css/lato.css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css' />
 
 <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css' />
 
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,200italic,400italic,600italic' rel='stylesheet' type='text/css' />
 
-<link rel="stylesheet" href="{$mybb->asset_url}/images/igame/animate.min.css">
+<link rel="stylesheet" href="{$mybb->asset_url}/images/igame/inc/css/animate.min.css">
 
 <meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
@@ -4493,13 +4497,13 @@ $("document").ready(function($){
 <script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.plugins.min.js?ver=1821"></script>
 <script type="text/javascript" src="{$mybb->asset_url}/jscripts/general.js?ver=1821"></script>
 
-<script type="text/javascript" src="{$mybb->asset_url}/images/igame/bootstrap.min.js"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/images/igame/inc/jscripts/bootstrap.min.js"></script>
 
-<link rel="stylesheet" href="{$mybb->asset_url}/images/igame/fontawesome5/css/all.css">
+<link rel="stylesheet" href="{$mybb->asset_url}/images/igame/inc/fontawesome5/css/all.css">
 
-<script type="text/javascript" src="{$mybb->asset_url}/images/igame/jquery.tipsy.js"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/images/igame/inc/jscripts/jquery.tipsy.js"></script>
 
-<script src="{$mybb->asset_url}/images/igame/wow.min.js"></script>
+<script src="{$mybb->asset_url}/images/igame/inc/jscripts/wow.min.js"></script>
 
 <script> new WOW().init(); </script>
 
@@ -4573,7 +4577,7 @@ jQuery(document).ready(function() {
 	var no_confirm = "{$lang->no}";
 	var MyBBEditor = null;
 	var spinner_image = "{$theme['imgdir']}/spinner.gif";
-	var spinner = "<img src='" + spinner_image +"' alt='' />";
+    var spinner = "<img src='" + spinner_image +"' alt='' style='display: none' /><i class='fas fa-spinner fa-spin'></i>";
 	var modal_zindex = 9999;
 // -->
 </script>]]></template>
@@ -5122,6 +5126,55 @@ jQuery(document).ready(function() {
 	</script>	
 </body>
 </html>]]></template>
+		<template name="showthread_quickreply" version="1822"><![CDATA[<div id="quickreply_spinner" class="showthread_spinner" style="display: none"><img src="{$theme['imgdir']}/spinner.gif" style="display: none;" /><i class="fas fa-spinner fa-spin"></i></div>
+<br />
+{$moderation_notice}
+<form method="post" action="newreply.php?tid={$tid}&amp;processed=1" name="quick_reply_form" id="quick_reply_form">
+	<input type="hidden" name="my_post_key" value="{$mybb->post_code}" />
+	<input type="hidden" name="subject" value="RE: {$reply_subject}" />
+	<input type="hidden" name="action" value="do_newreply" />
+	<input type="hidden" name="posthash" value="{$posthash}" id="posthash" />
+	<input type="hidden" name="quoted_ids" value="" id="quoted_ids" />
+	<input type="hidden" name="lastpid" id="lastpid" value="{$last_pid}" />
+	<input type="hidden" name="from_page" value="{$page}" />
+	<input type="hidden" name="tid" value="{$tid}" />
+	<input type="hidden" name="method" value="quickreply" />
+
+	<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+		<thead>
+			<tr>
+				<td class="thead{$collapsedthead['quickreply']}" colspan="2">
+					<div class="expcolimage"><img src="{$theme['imgdir']}/collapse{$collapsedimg['quickreply']}.png" id="quickreply_img" class="expander" alt="{$expaltext}" title="{$expaltext}" /></div>
+					<div><strong>{$lang->quick_reply}</strong></div>
+				</td>
+			</tr>
+		</thead>
+		<tbody style="{$collapsed['quickreply_e']}" id="quickreply_e">
+			<tr>
+				<td class="{$trow}" valign="top" width="22%">
+					<strong>{$lang->message}</strong><br />
+					<span class="smalltext">{$lang->message_note}<br /><br />
+					{$option_signature}
+					<label><input type="checkbox" class="checkbox" name="postoptions[disablesmilies]" value="1" />&nbsp;<strong>{$lang->disable_smilies}</strong></label>{$closeoption}</span>
+				</td>
+				<td class="{$trow}">
+					<div style="width: 95%">
+						<textarea style="width: 100%; padding: 4px; margin: 0;" rows="8" cols="80" name="message" id="message" tabindex="1"></textarea>
+					</div>
+					<div class="editor_control_bar" style="width: 95%; padding: 4px; margin-top: 3px; display: none;" id="quickreply_multiquote">
+						<span class="smalltext">
+							{$lang->quickreply_multiquote_selected} <a href="./newreply.php?tid={$tid}&amp;load_all_quotes=1" onclick="return Thread.loadMultiQuoted();">{$lang->quickreply_multiquote_now}</a> {$lang->or} <a href="javascript:void(0)" onclick="Thread.clearMultiQuoted(); return false;">{$lang->quickreply_multiquote_deselect}</a>.
+						</span>
+					</div>
+				</td>
+			</tr>
+			{$captcha}
+			<tr>
+				<td colspan="2" align="center" class="tfoot"><input type="submit" class="button" value="{$lang->post_reply}" tabindex="2" accesskey="s" id="quick_reply_submit" /> <input type="submit" class="button" name="previewpost" value="{$lang->preview_post}" tabindex="3" /></td>
+			</tr>
+		</tbody>
+	</table>
+</form>]]></template>
 		<template name="showthread_usersbrowsing" version="1817"><![CDATA[<br />
 <table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
 <tr><td class="thead"><strong>{$lang->users_browsing_thread} </strong></td></tr>
