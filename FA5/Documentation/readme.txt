@@ -1,4 +1,4 @@
-iGame by iAndrew & updated by Vintagedaddyo for 1.8.22
+iGame by iAndrew & updated by Vintagedaddyo for 1.8.22 & 1.8.24
 
 A dark semi transparent white and black gaming skin.
 
