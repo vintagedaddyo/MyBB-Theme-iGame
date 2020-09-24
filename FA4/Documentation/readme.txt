@@ -7,4 +7,4 @@ Drop downs galore
 Custom footer, showthread, profiles, forum display
 Text based logo 
 Google fonts
-Font awesome ready
+Font awesome 4 ready
